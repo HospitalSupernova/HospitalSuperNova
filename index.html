@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Hospital SuperNova</title>
+<style>
+body{
+background-color:#071e35;
+color:white;
+font-family:Arial,sans-serif;
+text-align:center;
+}
+h1{
+color:#38c8ff;
+font-size:40px;
+}
+p{
+font-size:18px;
+}
+button{
+background-color:#149bd7;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+margin:10px auto;
+display:block;
+}
+button:hover{
+background-color:#38c8ff;
+}
+.fotoPaciente{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #38c8ff;
+}
+input,select{
+padding:8px;
+border-radius:5px;
+border:none;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Hospital SuperNova</h1>
+<p>Tecnologia que cuida do Futuro</p>
+<p>Hospital de Inteligência Artificial e Biotecnologia</p>
+</header>
+<main>
+<section id="telaInicial">
+<p>
+Este é um jogo de simulação médica interativa,
+no qual o usuário poderá assumir o papel de um
+profissional de saúde que utiliza a IA como assistente.
+O usuário poderá inserir seu nome e aprender como
+a IA pode auxiliar na medicina, explorando simulações
+com diferentes pacientes e possibilidades de diagnóstico.
+</p>
+<h2>Bem-vindo ao Hospital SuperNova</h2>
+<p>
+Explore o futuro da medicina com o auxílio da inteligência artificial.
+</p>
+<h3>Identificação do profissional</h3>
+<label for="nome">Digite seu nome:</label>
+<input type="text" id="nome" placeholder="Seu nome">
+<br><br>
+<label for="tratamento">Como deseja ser chamado?</label>
+<select id="tratamento">
+<option value="Doutor">Doutor</option>
+<option value="Doutora">Doutora</option>
+</select>
+<br><br>
+<h4>Especialidade médica de interesse</h4>
+<label for="especialidade">Qual a sua especialidade?</label>
+<select id="especialidade">
+<option value="Cardiologia">Cardiologia</option>
+<option value="Neurologia">Neurologia</option>
+<option value="Clínica Geral">Clínica Geral</option>
+<option value="Pediatria">Pediatria</option>
+</select>
+<br><br>
+<button onclick="iniciarAtendimento()">
+Começar Atendimento
+</button>
+<button onclick="escolherOpcao('Projeto')">
+Conhecer o projeto
+</button>
+</section>
+<section id="telaAtendimento" style="display:none;">
+<h2 id="tituloAtendimento"></h2>
+<p id="mensagemAtendimento"></p>
+<p>Pontuação: <span id="pontuacao">0</span></p>
+<button onclick="voltarInicio()">
+Voltar à tela inicial
+</button>
+<button onclick="mostrarPaciente()">
+Ver primeiro paciente
+</button>
+</section>
+<section id="telaPaciente" style="display:none;">
+<img src="paciente001.jpg.png"
+alt="Foto do paciente Carlos Mendes"
+class="fotoPaciente">
+<h2>Paciente 001 - Carlos Mendes</h2>
+<p>Idade: 45 anos</p>
+<h3>Profissão: Motorista</h3>
+<p>
+O paciente relata cansaço frequente,
+falta de ar ao subir escadas, tontura
+ocasional e palpitações.
+</p>
+<h3>Histórico Médico</h3>
+<p>
+Os sintomas começaram há aproximadamente
+duas semanas. O paciente relata uma rotina
+cansativa e pouca atividade física.
+</p>
+<h3>Exames disponíveis</h3>
+<button onclick="mostrarExames()">
+Ver exames disponíveis
+</button>
+<p id="mostrarExames"></p>
+<button onclick="mostrarPaciente2()">
+Ver próximo paciente
+</button>
+<button onclick="voltarAtendimento()">
+Voltar
+</button>
+</section>
+<section id="telaPaciente2" style="display:none;">
+<img src="paciente002.jpg"
+alt="Foto da paciente Maria Silva"
+class="fotoPaciente">
+<h2>Paciente 002 - Maria Silva</h2>
+<p>Idade: 32 anos</p>
+<h3>Profissão: Professora</h3>
+<p>
+A paciente relata dores de cabeça frequentes,
+sensibilidade à luz e episódios de tontura.
+</p>
+<h3>Histórico Médico</h3>
+<p>
+Os sintomas começaram há aproximadamente
+um mês. A paciente relata que as dores
+aparecem principalmente após períodos
+prolongados de estudo e trabalho.
+</p>
+<h3>Exames disponíveis</h3>
+<button onclick="mostrarExamesPaciente2()">
+Ver exames disponíveis
+</button>
+<p id="mostrarExamesPaciente2"></p>
+<button onclick="voltarPaciente()">
+Voltar
+</button>
+</section>
+<section id="telaResultado" style="display:none;">
+<h2>Resultado do Exame</h2>
+<p id="resultadoFinal"></p>
+<h3>Escolha uma conduta</h3>
+<p id="explicacaoIA"></p>
+<button onclick="escolherConduta('anemia')">
+Encaminhar para investigação de anemia
+</button>
+<button onclick="escolherConduta('cardiologia')">
+Encaminhar para Cardiologia
+</button>
+<button onclick="escolherConduta('encerrar')">
+Encerrar atendimento
+</button>
+<p id="resultadoConduta"></p>
+<button onclick="voltarPaciente()">
+Voltar ao paciente
+</button>
+</section>
+</main>
+<script>
+let pontuacao=0;
+let condutaEscolhida=false;
+function iniciarAtendimento(){
+let nome=document.getElementById("nome").value;
+let tratamento=document.getElementById("tratamento").value;
+let especialidade=document.getElementById("especialidade").value;
+if(nome.trim()===""){
+alert("Por favor, digite seu nome!");
+}else{
+document.getElementById("telaInicial").style.display="none";
+document.getElementById("telaAtendimento").style.display="block";
+document.getElementById("tituloAtendimento").textContent=
+"Bem-vindo ao Hospital SuperNova, "+tratamento+" "+nome+"!";
+document.getElementById("mensagemAtendimento").textContent=
+"Sua especialidade é "+especialidade+". Prepare-se para o primeiro atendimento "+tratamento+".";
+}
+}
+function escolherOpcao(opcao){
+if(opcao=="Atendimento"){
+alert("Iniciando atendimento!");
+}else{
+alert("Conheça nosso projeto!");
+}
+}
+function voltarInicio(){
+document.getElementById("telaAtendimento").style.display="none";
+document.getElementById("telaInicial").style.display="block";
+}
+function mostrarPaciente(){
+document.getElementById("telaAtendimento").style.display="none";
+document.getElementById("telaPaciente").style.display="block";
+condutaEscolhida=false;
+}
+function voltarAtendimento(){
+document.getElementById("telaPaciente").style.display="none";
+document.getElementById("telaAtendimento").style.display="block";
+}
+function mostrarExames(){
+let exames=[
+"Pressão arterial",
+"Glicemia",
+"Eletrocardiograma",
+"Raio-X de tórax",
+"Oximetria",
+"Colesterol"
+];
+let exameCorreto="Hemograma";
+let resultados={
+"Hemograma":"Resultado simulado: níveis de hemoglobina abaixo do valor esperado.",
+"Pressão arterial":"Resultado simulado: pressão arterial dentro do valor esperado.",
+"Glicemia":"Resultado simulado: glicemia dentro do valor esperado.",
+"Eletrocardiograma":"Resultado simulado: ritmo cardíaco sem alterações nesta simulação.",
+"Raio-X de tórax":"Resultado simulado: sem alterações visíveis nesta simulação.",
+"Oximetria":"Resultado simulado: saturação de oxigênio dentro do valor esperado.",
+"Colesterol":"Resultado simulado: colesterol dentro do valor esperado."
+};
+let explicacoes={
+"Hemograma":"A IA sugere investigar uma possível anemia com avaliação profissional.",
+"Pressão arterial":"A IA informa que o resultado simulado não apresenta alterações relevantes.",
+"Glicemia":"A IA sugere analisar o resultado junto ao histórico do paciente.",
+"Eletrocardiograma":"A IA informa que o exame simulado não apresentou alterações.",
+"Raio-X de tórax":"A IA sugere relacionar o resultado com os sintomas do paciente.",
+"Oximetria":"A IA informa que a saturação simulada está dentro do valor esperado.",
+"Colesterol":"A IA sugere avaliar o resultado junto a outros fatores de saúde."
+};
+exames.sort(()=>Math.random()-0.5);
+let examesPaciente=[
+exameCorreto,
+...exames.slice(0,3)
+];
+examesPaciente.sort(()=>Math.random()-0.5);
+let area=document.getElementById("mostrarExames");
+area.innerHTML="";
+for(let i=0;i<examesPaciente.length;i++){
+let nomeExame=examesPaciente[i];
+let botao=document.createElement("button");
+botao.textContent="Solicitar "+nomeExame;
+botao.style.display="block";
+botao.style.margin="10px auto";
+botao.onclick=function(){
+document.getElementById("telaPaciente").style.display="none";
+document.getElementById("telaResultado").style.display="block";
+document.getElementById("resultadoFinal").textContent=
+resultados[nomeExame];
+document.getElementById("explicacaoIA").textContent=
+"IA Assistente: "+explicacoes[nomeExame];
+};
+area.appendChild(botao);
+}
+}
+function escolherConduta(conduta){
+let resultado=document.getElementById("resultadoConduta");
+if(conduta=="encerrar"){
+resultado.textContent=
+"Atendimento encerrado! Pontuação atual: "+pontuacao+" pontos.";
+return;
+}
+if(condutaEscolhida==true){
+resultado.textContent=
+"Você já escolheu uma conduta para este paciente!";
+return;
+}
+condutaEscolhida=true;
+if(conduta=="anemia"){
+pontuacao=pontuacao+10;
+resultado.textContent=
+"Conduta registrada: investigar possível anemia. A avaliação profissional é necessária. +10 pontos";
+}
+else if(conduta=="cardiologia"){
+pontuacao=pontuacao+5;
+resultado.textContent=
+"Conduta registrada: encaminhamento para Cardiologia devido às palpitações e falta de ar. +5 pontos";
+}
+document.getElementById("pontuacao").textContent=pontuacao;
+}
+function voltarPaciente(){
+document.getElementById("telaResultado").style.display="none";
+document.getElementById("telaPaciente").style.display="block";
+}
+function mostrarPaciente2(){
+condutaEscolhida=false;
+document.getElementById("telaPaciente").style.display="none";
+document.getElementById("telaPaciente2").style.display="block";
+}
+function mostrarExamesPaciente2(){
+    function mostrarExamesPaciente2(){
+let exames=[
+"Tomografia computadorizada",
+"Eletroencefalograma",
+"Pressão arterial",
+"Glicemia",
+"Exame neurológico",
+"Hemograma"
+];
+let exameCorreto="Ressonância magnética";
+exames.sort(()=>Math.random()-0.5);
+let examesPaciente=[
+    exameCorreto,
+    ...exames.slice(0,3)
+];
+examesPaciente.sort(()=>Math.random()-0.5);
+let area=document.getElementById("mostrarExamesPaciente2");
+area=innerHTML="";
+}
+}
+</script>
+</body>
+</html>

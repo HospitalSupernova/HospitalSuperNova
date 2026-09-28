@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Hospital SuperNova</title>
+<link rel="icon" href="logo.png">
 <style>
 body{
 background-color:#071e35;
@@ -42,13 +43,16 @@ padding:8px;
 border-radius:5px;
 border:none;
 }
+.logo{
+    width:420px;
+    max-width:90%;
+    height:auto;
+}
 </style>
 </head>
 <body>
 <header>
-<h1>Hospital SuperNova</h1>
-<p>Tecnologia que cuida do Futuro</p>
-<p>Hospital de Inteligência Artificial e Biotecnologia</p>
+<img src="logo.png" alt="Logo do Hospital SuperNova" class="logo">
 </header>
 <main>
 <section id="telaInicial">
@@ -304,7 +308,6 @@ document.getElementById("telaPaciente").style.display="none";
 document.getElementById("telaPaciente2").style.display="block";
 }
 function mostrarExamesPaciente2(){
-    function mostrarExamesPaciente2(){
 let exames=[
 "Tomografia computadorizada",
 "Eletroencefalograma",
@@ -314,14 +317,45 @@ let exames=[
 "Hemograma"
 ];
 let exameCorreto="Ressonância magnética";
+let resultados={
+"Ressonância magnética":"Resultado simulado: foram observadas alterações que precisam de avaliação profissional.",
+"Tomografia computadorizada":"Resultado simulado: sem alterações relevantes nesta simulação.",
+"Eletroencefalograma":"Resultado simulado: atividade cerebral dentro do esperado nesta simulação.",
+"Pressão arterial":"Resultado simulado: pressão arterial dentro do valor esperado.",
+"Glicemia":"Resultado simulado: glicemia dentro do valor esperado.",
+"Exame neurológico":"Resultado simulado: foram observados sinais que precisam de avaliação profissional.",
+"Hemograma":"Resultado simulado: resultados dentro do valor esperado nesta simulação."
+};
+let explicacoes={
+"Ressonância magnética":"A IA sugere investigar as alterações encontradas com avaliação profissional.",
+"Tomografia computadorizada":"A IA informa que o resultado simulado não apresenta alterações relevantes.",
+"Eletroencefalograma":"A IA informa que o resultado simulado está dentro do esperado.",
+"Pressão arterial":"A IA informa que a pressão simulada está dentro do valor esperado.",
+"Glicemia":"A IA sugere analisar o resultado junto ao histórico da paciente.",
+"Exame neurológico":"A IA sugere uma avaliação profissional mais detalhada.",
+"Hemograma":"A IA informa que o resultado simulado está dentro do esperado."
+};
 exames.sort(()=>Math.random()-0.5);
 let examesPaciente=[
-    exameCorreto,
-    ...exames.slice(0,3)
+exameCorreto,
+...exames.slice(0,3)
 ];
 examesPaciente.sort(()=>Math.random()-0.5);
 let area=document.getElementById("mostrarExamesPaciente2");
-area=innerHTML="";
+area.innerHTML="";
+for(let i=0;i<examesPaciente.length;i++){
+let nomeExame=examesPaciente[i];
+let botao=document.createElement("button");
+botao.textContent="Solicitar "+nomeExame;
+botao.style.display="block";
+botao.style.margin="10px auto";
+botao.onclick=function(){
+document.getElementById("telaPaciente2").style.display="none";
+document.getElementById("telaResultado").style.display="block";
+document.getElementById("resultadoFinal").textContent=resultados[nomeExame];
+document.getElementById("explicacaoIA").textContent="IA Assistente: "+explicacoes[nomeExame];
+};
+area.appendChild(botao);
 }
 }
 </script>

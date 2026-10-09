@@ -6,53 +6,198 @@
 <link rel="icon" href="logo.png">
 <style>
 body{
-background-color:#071e35;
-color:white;
-font-family:Arial,sans-serif;
-text-align:center;
+    margin:0;
+    background:linear-gradient(135deg,#06182b,#0a3152);
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    min-height:100vh;
+}
+header{
+    padding:25px 20px 10px;
 }
 h1{
-color:#38c8ff;
-font-size:40px;
+    color:#38c8ff;
+    font-size:40px;
+}
+h2{
+    color:#38c8ff;
+    font-size:30px;
+    margin-bottom:15px;
+    text-shadow:0 0 10px rgba(56,200,255,0.25);
+}
+h3{
+    color:#7bdcff;
 }
 p{
-font-size:18px;
+    font-size:18px;
+    line-height:1.6;
+}
+main{
+    width:90%;
+    max-width:900px;
+    margin:0 auto;
+}
+section{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(56,200,255,0.25);
+    border-radius:18px;
+    padding:30px;
+    margin:25px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
 }
 button{
-background-color:#149bd7;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:8px;
-cursor:pointer;
-margin:10px auto;
-display:block;
+    background:linear-gradient(135deg,#149bd7,#0877b5);
+    color:white;
+    border:none;
+    padding:13px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    margin:10px auto;
+    display:block;
+    font-size:16px;
+    transition:0.2s;
 }
 button:hover{
-background-color:#38c8ff;
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(56,200,255,0.35);
 }
-.fotoPaciente{
-width:220px;
-height:220px;
-object-fit:cover;
-border-radius:50%;
-border:3px solid #38c8ff;
+.botaoPrincipal{
+    background:linear-gradient(135deg,#38c8ff,#0877b5);
+    font-size:18px;
+    padding:15px 28px;
+}
+.botaoExame{
+    width:80%;
+    max-width:500px;
+    background:rgba(20,155,215,0.18);
+    border:1px solid rgba(56,200,255,0.35);
+    margin:8px auto;
 }
 input,select{
-padding:8px;
-border-radius:5px;
-border:none;
+    padding:11px;
+    border-radius:8px;
+    border:1px solid rgba(56,200,255,0.35);
+    margin:7px;
+    font-size:15px;
+    background:#f5f5f5;
+    color:#123;
+}
+input:focus,select:focus{
+    outline:2px solid #38c8ff;
+}
+.fotoPaciente{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #38c8ff;
+    box-shadow:0 0 20px rgba(56,200,255,0.35);
+}
+.infoPaciente{
+    background:rgba(0,0,0,0.15);
+    border:1px solid rgba(56,200,255,0.2);
+    border-radius:12px;
+    padding:15px;
+    margin:20px auto;
+    max-width:650px;
+}
+.nomePaciente{
+    color:#7bdcff;
+    font-size:24px;
+    margin:10px 0;
+}
+.sintomasPaciente{
+    background:rgba(56,200,255,0.08);
+    border-left:4px solid #38c8ff;
+    padding:12px 15px;
+    margin:20px auto;
+    max-width:650px;
+    text-align:left;
+    border-radius:8px;
 }
 .logo{
     width:420px;
     max-width:90%;
     height:auto;
 }
+.subtitulo{
+    color:#7bdcff;
+    font-size:18px;
+    margin-top:5px;
+    letter-spacing:1px;
+}
+.caixaIdentificacao{
+    background:#1b5f87;
+    border: 2px solid rgba(56,200,255,0.2);
+    border-radius:15px;
+    padding:20px;
+    margin:25px auto;
+    max-width:600px;
+}
+.mensagemBoasVindas{
+    font-size:20px;
+    color:#d9f5ff;
+    line-height:1.6;
+    max-width:700px;
+    margin:20px auto;
+}
+.resultadoIA{
+    background:rgba(56,200,255,0.08);
+    border:1px solid rgba(56,200,255,0.35);
+    border-left:4px solid #38c8ff;
+    border-radius:12px;
+    padding:18px;
+    margin:20px auto;
+    max-width:650px;
+    text-align:left;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+.condutas{
+    background:rgba(20,155,215,0.06);
+    border:1px solid rgba(56,200,255,0.2);
+    border-radius:15px;
+    padding:20px;
+    margin:25px auto;
+    max-width:650px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+}
+.condutas button{
+    width:90%;
+    max-width:500px;
+    background:rgba(20,155,215,0.18);
+    border:1px solid rgba(56,200,255,0.3);
+    padding:12px 18px;
+    margin:8px auto;
+}
+.telaFinal{
+    background:rgba(56,200,255,0.08);
+    border:1px solid rgba(56,200,255,0.3);
+    border-radius:18px;
+    padding:30px;
+    margin:30px auto;
+    max-width:650px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+.pontuacaoFinal{
+    font-size:42px;
+    font-weight:bold;
+    color:#38c8ff;
+    text-shadow:0 0 15px rgba(56,200,255,0.35);
+    margin:15px 0;
+}
+.condutas button:hover{
+    background:rgba(56,200,255,0.25);
+    box-shadow:0 5px 15px rgba(56,200,255,0.25);
+}
 </style>
 </head>
 <body>
 <header>
 <img src="logo.png" alt="Logo do Hospital SuperNova" class="logo">
+<p class="subtitulo">
+    Tecnologia que cuida do futuro
+</p>
 </header>
 <main>
 <section id="telaInicial">
@@ -68,6 +213,7 @@ com diferentes pacientes e possibilidades de diagnóstico.
 <p>
 Explore o futuro da medicina com o auxílio da inteligência artificial.
 </p>
+<div class="caixaIdentificacao">
 <h3>Identificação do profissional</h3>
 <label for="nome">Digite seu nome:</label>
 <input type="text" id="nome" placeholder="Seu nome">
@@ -87,16 +233,17 @@ Explore o futuro da medicina com o auxílio da inteligência artificial.
 <option value="Pediatria">Pediatria</option>
 </select>
 <br><br>
-<button onclick="iniciarAtendimento()">
-Começar Atendimento
-</button>
+<button class="botaoPrincipal" onclick="iniciarAtendimento()">
+    Começar Atendimento
+    </button>
+</div>
 <button onclick="escolherOpcao('Projeto')">
 Conhecer o projeto
 </button>
 </section>
-<section id="telaAtendimento" style="display:none;">
+<section id="telaAtendimento" style="display:none" class="botaoPrincipal";>
 <h2 id="tituloAtendimento"></h2>
-<p id="mensagemAtendimento"></p>
+<p id="mensagemAtendimento" class="mensagemBoasVindas"></p>
 <p>Pontuação: <span id="pontuacao">0</span></p>
 <button onclick="voltarInicio()">
 Voltar à tela inicial
@@ -105,11 +252,103 @@ Voltar à tela inicial
 Ver primeiro paciente
 </button>
 </section>
+<section id="telaPacienteCardiologia1" style="display:none;">
+<img src="paciente004.jpg.png"
+alt="Foto da paciente Ana Costa"
+class="fotoPaciente">
+<h2 class="nomePaciente">Paciente 004 - Ana Costa</h2>
+<p>Idade: 54 anos</p>
+<h3>Profissão: Advogada</h3>
+<p>
+A paciente relata cansaço ao realizar esforços,
+palpitações ocasionais e sensação de falta de ar
+após atividades físicas.
+</p>
+<h3>Histórico Médico</h3>
+<p class="sintomasPaciente">
+Os sintomas começaram há aproximadamente
+um mês. A paciente relata uma rotina de trabalho
+intensa e pouco tempo para atividades físicas.
+</p>
+<h3>Exames disponíveis</h3>
+<button class="botaoExame" onclick="mostrarExamesCardio1()">
+Ver exames disponíveis
+</button>
+<p id="mostrarExamesCardio1"></p>
+<button onclick="mostrarPacienteCardio2()">
+Ver próximo paciente
+</button>
+<button onclick="voltarAtendimento()">
+Voltar
+</button>
+</section>
+<section id="telaPacienteCardiologia2" style="display:none;">
+<img src="paciente005.jpg.png"
+alt="Foto do paciente Jorge Almeida"
+class="fotoPaciente">
+<h2 class="nomePaciente">Paciente 005 - Jorge Almeida</h2>
+<p>Idade: 61 anos</p>
+<h3>Profissão: Empresário</h3>
+<p>
+O paciente relata pressão no peito durante esforços,
+cansaço frequente e episódios de tontura.
+</p>
+<h3>Histórico Médico</h3>
+<p class="sintomasPaciente">
+Os sintomas começaram há aproximadamente
+duas semanas. O paciente relata uma rotina
+de trabalho intensa e histórico de sedentarismo.
+</p>
+<h3>Exames disponíveis</h3>
+<button class="botaoExame" onclick="mostrarExamesCardio2()">
+Ver exames disponíveis
+</button>
+<p id="mostrarExamesCardio2"></p>
+<button onclick="mostrarPacienteCardio3()">
+Ver próximo paciente
+</button>
+<button onclick="voltarAtendimento()">
+Voltar
+</button>
+</section>
+<section id="telaPacienteCardiologia3" style="display:none;">
+<img src="paciente006.jpg.png"
+alt="Foto da paciente Beatriz Lima"
+class="fotoPaciente">
+<h2 class="nomePaciente">Paciente 006 - Beatriz Lima</h2>
+<p>Idade: 47 anos</p>
+<h3>Profissão: Professora</h3>
+<p>
+A paciente relata palpitações ocasionais,
+cansaço ao subir escadas e episódios de
+batimentos cardíacos acelerados.
+</p>
+<h3>Histórico Médico</h3>
+<p class="sintomasPaciente">
+Os sintomas começaram há aproximadamente
+três semanas. A paciente relata períodos de
+estresse e uma rotina de trabalho intensa.
+</p>
+<h3>Exames disponíveis</h3>
+<button class="botaoExame" onclick="mostrarExamesCardio3()">
+Ver exames disponíveis
+</button>
+<p id="mostrarExamesCardio3"></p>
+<button onclick="voltarAtendimento()">
+Voltar
+</button>
+</section>
+<section id="telaPacienteNeurologia" style="display:none;">
+    
+</section>
+<section id="telaPacientePediatria" style="display:none;">
+    
+</section>
 <section id="telaPaciente" style="display:none;">
 <img src="paciente001.jpg.png"
 alt="Foto do paciente Carlos Mendes"
 class="fotoPaciente">
-<h2>Paciente 001 - Carlos Mendes</h2>
+<h2 class="nomePaciente">Paciente 001 - Carlos Mendes</h2>
 <p>Idade: 45 anos</p>
 <h3>Profissão: Motorista</h3>
 <p>
@@ -118,13 +357,13 @@ falta de ar ao subir escadas, tontura
 ocasional e palpitações.
 </p>
 <h3>Histórico Médico</h3>
-<p>
+<p class="sintomasPaciente">
 Os sintomas começaram há aproximadamente
 duas semanas. O paciente relata uma rotina
 cansativa e pouca atividade física.
 </p>
 <h3>Exames disponíveis</h3>
-<button onclick="mostrarExames()">
+<button class="botaoExame" onclick="mostrarExames()">
 Ver exames disponíveis
 </button>
 <p id="mostrarExames"></p>
@@ -139,7 +378,7 @@ Voltar
 <img src="paciente002.jpg.png"
 alt="Foto da paciente Maria Silva"
 class="fotoPaciente">
-<h2>Paciente 002 - Maria Silva</h2>
+<h2 class="nomePaciente">Paciente 002 - Maria Silva</h2>
 <p>Idade: 32 anos</p>
 <h3>Profissão: Professora</h3>
 <p>
@@ -147,58 +386,112 @@ A paciente relata dores de cabeça frequentes,
 sensibilidade à luz e episódios de tontura.
 </p>
 <h3>Histórico Médico</h3>
-<p>
+<p class="sintomasPaciente">
 Os sintomas começaram há aproximadamente
 um mês. A paciente relata que as dores
 aparecem principalmente após períodos
 prolongados de estudo e trabalho.
 </p>
 <h3>Exames disponíveis</h3>
-<button onclick="mostrarExamesPaciente2()">
+<button class="botaoExame" onclick="mostrarExamesPaciente2()">
 Ver exames disponíveis
 </button>
 <p id="mostrarExamesPaciente2"></p>
-<button onclick="voltarPaciente()">
+<button onclick="voltarAtendimento()">
+Voltar
+</button>
+</section>
+<section id="telaPaciente3" style="display:none;">
+<img src="paciente003.jpg.png"
+alt="Foto do paciente Rafael Oliveira"
+class="fotoPaciente">
+<h2 class="nomePaciente">Paciente 003 - Rafael Oliveira</h2>
+<p>Idade: 58 anos</p>
+<h3>Profissão: Comerciante</h3>
+<p>
+O paciente relata dor no peito ao realizar esforços,
+cansaço frequente e sensação de pressão no peito.
+</p>
+<h3>Histórico Médico</h3>
+<p class="sintomasPaciente">
+Os sintomas começaram há aproximadamente
+três semanas. O paciente relata uma rotina
+de trabalho intensa e histórico de sedentarismo.
+</p>
+<h3>Exames disponíveis</h3>
+<button class="botaoExame" onclick="mostrarExamesPaciente3()">
+Ver exames disponíveis
+</button>
+<p id="mostrarExamesPaciente3"></p>
+<button onclick="voltarAtendimento()">
 Voltar
 </button>
 </section>
 <section id="telaResultado" style="display:none;">
 <h2>Resultado do Exame</h2>
-<p id="resultadoFinal"></p>
+<p id="resultadoFinal" class="resultadoIA"></p>
+<div class="condutas">
 <h3>Escolha uma conduta</h3>
-<p id="explicacaoIA"></p>
-<button onclick="escolherConduta('anemia')">
+<p id="explicacaoIA" class="resultadoIA"></p>
+<button id="condutaAnemia" onclick="escolherConduta('anemia')">
 Encaminhar para investigação de anemia
 </button>
-<button onclick="escolherConduta('cardiologia')">
+<button id="condutaCardiologia" onclick="escolherConduta('cardiologia')">
 Encaminhar para Cardiologia
 </button>
-<button onclick="escolherConduta('encerrar')">
+<button id="condutaNeurologia" onclick="escolherConduta('neurologia')">
+Encaminhar para Neurologia
+</button>
+<button id="condutaAcompanhar" onclick="escolherConduta('acompanhar')">
+Acompanhar os sintomas
+</button>
+<button id="condutaEncerrar" onclick="escolherConduta('encerrar')">
 Encerrar atendimento
 </button>
+</div>
 <p id="resultadoConduta"></p>
 <button onclick="voltarPaciente()">
 Voltar ao paciente
+</button>
+</section>
+<section id="telaFinal" style="display:none;" class="telaFinal">
+<h2>Atendimento concluído!</h2>
+<p>
+Parabéns! Você concluiu os atendimentos do Hospital SuperNova.
+</p>
+<h3>Sua pontuação final:</h3>
+<p>
+<span id="pontuacaoFinal" class="pontuacaoFinal">0</span> pontos
+</p>
+<p id="mensagemFinal"></p>
+<button onclick="voltarInicio()">
+Voltar à tela inicial
 </button>
 </section>
 </main>
 <script>
 let pontuacao=0;
 let condutaEscolhida=false;
+let pacienteAtual=1;
+let especialidadeEscolhida="";
 function iniciarAtendimento(){
-let nome=document.getElementById("nome").value;
-let tratamento=document.getElementById("tratamento").value;
-let especialidade=document.getElementById("especialidade").value;
-if(nome.trim()===""){
-alert("Por favor, digite seu nome!");
-}else{
-document.getElementById("telaInicial").style.display="none";
-document.getElementById("telaAtendimento").style.display="block";
-document.getElementById("tituloAtendimento").textContent=
-"Bem-vindo ao Hospital SuperNova, "+tratamento+" "+nome+"!";
-document.getElementById("mensagemAtendimento").textContent=
-"Sua especialidade é "+especialidade+". Prepare-se para o primeiro atendimento "+tratamento+".";
-}
+    let nome=document.getElementById("nome").value;
+    let tratamento=document.getElementById("tratamento").value;
+    let especialidade=document.getElementById("especialidade").value;
+
+    if(nome.trim()===""){
+        alert("Por favor, digite seu nome!");
+    }
+    else{
+        especialidadeEscolhida=especialidade;
+        document.getElementById("telaInicial").style.display="none";
+        document.getElementById("telaAtendimento").style.display="block";
+        document.getElementById("tituloAtendimento").textContent=
+        "Bem-vindo ao Hospital SuperNova, " + tratamento + " " + nome + "!";
+        document.getElementById("mensagemAtendimento").textContent=
+        "Sua especialidade é "+especialidade+
+        ". Prepare-se para realizar o primeiro atendimento como "+tratamento+".";
+    }
 }
 function escolherOpcao(opcao){
 if(opcao=="Atendimento"){
@@ -209,16 +502,186 @@ alert("Conheça nosso projeto!");
 }
 function voltarInicio(){
 document.getElementById("telaAtendimento").style.display="none";
+document.getElementById("telaFinal").style.display="none";
 document.getElementById("telaInicial").style.display="block";
 }
 function mostrarPaciente(){
-document.getElementById("telaAtendimento").style.display="none";
-document.getElementById("telaPaciente").style.display="block";
-condutaEscolhida=false;
+    document.getElementById("telaAtendimento").style.display="none";
+    condutaEscolhida=false;
+    pacienteAtual=1;
+    esconderTelasPacientes();
+    if(especialidadeEscolhida=="Clínica Geral"){
+        document.getElementById("telaPaciente").style.display="block";
+        atualizarCondutas();
+    }
+    else if(especialidadeEscolhida=="Cardiologia"){
+        document.getElementById("telaPacienteCardiologia1").style.display="block";
+    }
+    else if(especialidadeEscolhida=="Neurologia"){
+        document.getElementById("telaPacienteNeurologia").style.display="block";
+    }
+    else if(especialidadeEscolhida=="Pediatria"){
+        document.getElementById("telaPacientePediatria").style.display="block";
+    }
+}
+function esconderTelasPacientes(){
+    document.getElementById("telaPaciente").style.display="none";
+    document.getElementById("telaPaciente2").style.display="none";
+    document.getElementById("telaPaciente3").style.display="none";
+    document.getElementById("telaPacienteCardiologia1").style.display="none";
+    document.getElementById("telaPacienteCardiologia2").style.display="none";
+    document.getElementById("telaPacienteCardiologia3").style.display="none";
+    document.getElementById("telaPacienteNeurologia").style.display="none";
+    document.getElementById("telaPacientePediatria").style.display="none";
 }
 function voltarAtendimento(){
-document.getElementById("telaPaciente").style.display="none";
-document.getElementById("telaAtendimento").style.display="block";
+    esconderTelasPacientes();
+    document.getElementById("telaResultado").style.display="none";
+    document.getElementById("telaAtendimento").style.display="block";
+}
+function mostrarPacienteCardio2(){
+    esconderTelasPacientes();
+    pacienteAtual=2;
+    condutaEscolhida=false;
+    document.getElementById("telaPacienteCardiologia2").style.display="block";
+}
+function mostrarPacienteCardio3(){
+    esconderTelasPacientes();
+    pacienteAtual=3;
+    condutaEscolhida=false;
+    document.getElementById("telaPacienteCardiologia3").style.display="block";
+}
+function mostrarExamesCardio1(){
+    let exames=[
+        "Pressão arterial",
+        "Ecocardiograma",
+        "Colesterol",
+        "Hemograma",
+        "Raio-X de tórax",
+        "Oximetria"
+    ];
+    let exameCorreto="Eletrocardiograma";
+    exames.sort(()=>Math.random()-0.5);
+    let examesPaciente=[
+        exameCorreto,
+        ...exames.slice(0,3)
+    ];
+    examesPaciente.sort(()=>Math.random()-0.5);
+    let area=document.getElementById("mostrarExamesCardio1");
+    area.innerHTML="";
+    for(let i=0;i<examesPaciente.length;i++){
+        let nomeExame=examesPaciente[i];
+        let botao=document.createElement("button");
+        botao.className="botaoExame";
+        botao.textContent="Solicitar "+nomeExame;
+        botao.style.display="block";
+        botao.style.margin="10px auto";
+        botao.onclick=function(){
+            document.getElementById("telaPacienteCardiologia1").style.display="none";
+            atualizarCondutas();
+            if(nomeExame=="Eletrocardiograma"){
+                document.getElementById("resultadoFinal").textContent=
+                "Resultado simulado: foram observadas alterações que precisam de avaliação profissional.";
+                document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: o resultado simulado sugere uma avaliação cardiológica.";
+            }
+            else{
+                document.getElementById("resultadoFinal").textContent=
+                "Resultado simulado: exame dentro do valor esperado nesta simulação.";
+                document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: o resultado deve ser analisado junto ao histórico da paciente.";
+            }
+        };
+        area.appendChild(botao);
+    }
+}
+function mostrarExamesCardio2(){
+    let exames=[
+        "Pressão arterial",
+        "Eletrocardiograma",
+        "Colesterol",
+        "Hemograma",
+        "Oximetria",
+        "Ecocardiograma"
+    ];
+    let exameCorreto="Ecocardiograma";
+    exames.sort(()=>Math.random()-0.5);
+    let examesPaciente=[
+        exameCorreto,
+        ...exames.slice(0,3)
+    ];
+    examesPaciente.sort(()=>Math.random()-0.5);
+    let area=document.getElementById("mostrarExamesCardio2");
+    area.innerHTML="";
+    for(let i=0;i<examesPaciente.length;i++){
+        let nomeExame=examesPaciente[i];
+        let botao=document.createElement("button");
+        botao.className="botaoExame";
+        botao.textContent="Solicitar "+nomeExame;
+        botao.style.display="block";
+        botao.style.margin="10px auto";
+        botao.onclick=function(){
+            document.getElementById("telaPacienteCardiologia2").style.display="none";
+            atualizarCondutas();
+            if(nomeExame=="Ecocardiograma"){
+                document.getElementById("resultadoFinal").textContent=
+                "Resultado simulado: foram observadas alterações que precisam de avaliação profissional.";
+                document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: o resultado simulado merece avaliação cardiológica.";
+            }
+            else{
+                document.getElementById("resultadoFinal").textContent=
+                "Resultado simulado: exame dentro do valor esperado nesta simulação.";
+                document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: o resultado deve ser analisado junto ao histórico do paciente.";
+            }
+        };
+        area.appendChild(botao);
+    }
+}
+function mostrarExamesCardio3(){
+    let exames=[
+        "Pressão arterial",
+        "Eletrocardiograma",
+        "Colesterol",
+        "Hemograma",
+        "Oximetria",
+        "Raio-X de tórax"
+    ];
+    let exameCorreto="Eletrocardiograma";
+    exames.sort(()=>Math.random()-0.5);
+    let examesPaciente=[
+        exameCorreto,
+        ...exames.slice(0,3)
+    ];
+    examesPaciente.sort(()=>Math.random()-0.5);
+    let area=document.getElementById("mostrarExamesCardio3");
+    area.innerHTML="";
+    for(let i=0;i<examesPaciente.length;i++){
+        let nomeExame=examesPaciente[i];
+        let botao=document.createElement("button");
+        botao.className="botaoExame";
+        botao.textContent="Solicitar "+nomeExame;
+        botao.style.display="block";
+        botao.style.margin="10px auto";
+        botao.onclick=function(){
+            document.getElementById("telaPacienteCardiologia3").style.display="none";
+            atualizarCondutas();
+            if(nomeExame=="Eletrocardiograma"){
+                document.getElementById("resultadoFinal").textContent=
+                "Resultado simulado: foram observadas alterações que precisam de avaliação profissional.";
+                document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: o resultado simulado sugere uma avaliação cardiológica.";
+            }
+            else{
+                document.getElementById("resultadoFinal").textContent=
+                "Resultado simulado: exame dentro do valor esperado nesta simulação.";
+                document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: o resultado deve ser analisado junto ao histórico da paciente.";
+            }
+        };
+        area.appendChild(botao);
+    }
 }
 function mostrarExames(){
 let exames=[
@@ -259,6 +722,7 @@ area.innerHTML="";
 for(let i=0;i<examesPaciente.length;i++){
 let nomeExame=examesPaciente[i];
 let botao=document.createElement("button");
+botao.className="botaoExame";
 botao.textContent="Solicitar "+nomeExame;
 botao.style.display="block";
 botao.style.margin="10px auto";
@@ -273,39 +737,206 @@ document.getElementById("explicacaoIA").textContent=
 area.appendChild(botao);
 }
 }
+function atualizarCondutas(){
+    let anemia=document.getElementById("condutaAnemia");
+    let cardio=document.getElementById("condutaCardiologia");
+    let neuro=document.getElementById("condutaNeurologia");
+    let acompanhar=document.getElementById("condutaAcompanhar");
+    anemia.style.display="none";
+    cardio.style.display="none";
+    neuro.style.display="none";
+    acompanhar.style.display="none";
+    if(especialidadeEscolhida=="Clínica Geral"){
+        if(pacienteAtual==1){
+            anemia.style.display="block";
+            cardio.style.display="block";
+            anemia.textContent="Encaminhar para investigação de anemia";
+            cardio.textContent="Encaminhar para Cardiologia";
+            anemia.onclick=function(){
+                escolherConduta("anemia");
+            };
+            cardio.onclick=function(){
+                escolherConduta("cardiologia");
+            };
+        }
+        else if(pacienteAtual==2){
+            neuro.style.display="block";
+            acompanhar.style.display="block";
+            neuro.textContent="Encaminhar para Neurologia";
+            acompanhar.textContent="Acompanhar os sintomas";
+            neuro.onclick=function(){
+                escolherConduta("neurologia");
+            };
+            acompanhar.onclick=function(){
+                escolherConduta("acompanhar");
+            };
+        }
+        else if(pacienteAtual==3){
+            cardio.style.display="block";
+            acompanhar.style.display="block";
+            cardio.textContent="Encaminhar para avaliação cardiológica";
+            acompanhar.textContent="Acompanhamento clínico";
+            cardio.onclick=function(){
+                escolherConduta("cardiologia3");
+            };
+            acompanhar.onclick=function(){
+                escolherConduta("acompanhamento3");
+            };
+        }
+    }
+    else if(especialidadeEscolhida=="Cardiologia"){
+        anemia.style.display="block";
+        cardio.style.display="block";
+        neuro.style.display="block";
+        acompanhar.style.display="block";
+        if(pacienteAtual==1){
+            anemia.textContent="Revisar os resultados dos exames";
+            cardio.textContent="Solicitar avaliação cardiológica";
+            neuro.textContent="Revisar os sintomas relatados";
+            acompanhar.textContent="Registrar acompanhamento da equipe";
+        }
+        else if(pacienteAtual==2){
+            anemia.textContent="Reavaliar os resultados dos exames";
+            cardio.textContent="Solicitar avaliação cardiológica";
+            neuro.textContent="Investigar os sintomas relatados";
+            acompanhar.textContent="Registrar acompanhamento da equipe";
+        }
+        else if(pacienteAtual==3){
+            anemia.textContent="Revisar os resultados dos exames";
+            cardio.textContent="Solicitar avaliação cardiológica";
+            neuro.textContent="Reavaliar os sintomas relatados";
+            acompanhar.textContent="Registrar acompanhamento da equipe";
+
+        }
+        anemia.onclick=function(){
+            escolherConduta("cardioExames");
+        };
+        cardio.onclick=function(){
+            escolherConduta("cardioEspecialista");
+        };
+        neuro.onclick=function(){
+            escolherConduta("cardioSintomas");
+        };
+        acompanhar.onclick=function(){
+            escolherConduta("cardioAcompanhar");
+        };
+    }
+}
+function avancarPaciente(){
+    document.getElementById("telaResultado").style.display="none";
+    esconderTelasPacientes();
+    condutaEscolhida=false;
+    if(pacienteAtual<3){
+        pacienteAtual=pacienteAtual+1;
+        if(especialidadeEscolhida=="Clínica Geral"){
+            if(pacienteAtual==2){
+                document.getElementById("telaPaciente2").style.display="block";
+            }
+            else if(pacienteAtual==3){
+                document.getElementById("telaPaciente3").style.display="block";
+            }
+            atualizarCondutas();
+        }
+        else if(especialidadeEscolhida=="Cardiologia"){
+            if(pacienteAtual==2){
+                document.getElementById("telaPacienteCardiologia2").style.display="block";
+            }
+            else if(pacienteAtual==3){
+                document.getElementById("telaPacienteCardiologia3").style.display="block";
+            }
+        }
+        else{
+            document.getElementById("telaFinal").style.display="block";
+            document.getElementById("pontuacaoFinal").textContent=pontuacao;
+        }
+    }
+    else{
+        document.getElementById("telaFinal").style.display="block";
+        document.getElementById("pontuacaoFinal").textContent=pontuacao;
+    }
+}
+
 function escolherConduta(conduta){
-let resultado=document.getElementById("resultadoConduta");
-if(conduta=="encerrar"){
-resultado.textContent=
-"Atendimento encerrado! Pontuação atual: "+pontuacao+" pontos.";
-return;
+    let resultado=document.getElementById("resultadoConduta");
+    if(conduta=="encerrar"){
+        avancarPaciente();
+        return;
+    }
+    if(condutaEscolhida==true){
+        resultado.textContent=
+        "Você já escolheu uma conduta para este paciente!";
+        return;
+    }
+    condutaEscolhida=true;
+    if(especialidadeEscolhida=="Clínica Geral"){
+        if(pacienteAtual==1){
+            if(conduta=="anemia"){
+                pontuacao=pontuacao+10;
+                resultado.textContent=
+                "Conduta registrada: investigar possível anemia. A avaliação profissional é necessária. +10 pontos";
+            }
+            else if(conduta=="cardiologia"){
+                pontuacao=pontuacao+5;
+                resultado.textContent=
+                "Conduta registrada: encaminhamento para Cardiologia devido às palpitações e falta de ar. +5 pontos";
+            }
+        }
+        else if(pacienteAtual==2){
+            if(conduta=="neurologia"){
+                pontuacao=pontuacao+10;
+                resultado.textContent=
+                "Conduta registrada: encaminhamento para Neurologia. A avaliação profissional é necessária. +10 pontos";
+            }
+            else if(conduta=="acompanhar"){
+                pontuacao=pontuacao+5;
+                resultado.textContent=
+                "Conduta registrada: acompanhar os sintomas e realizar avaliação profissional. +5 pontos";
+            }
+        }
+        else if(pacienteAtual==3){
+            if(conduta=="cardiologia3"){
+                pontuacao=pontuacao+10;
+                resultado.textContent=
+                "Conduta registrada: encaminhamento para avaliação cardiológica. A avaliação profissional é necessária. +10 pontos";
+            }
+            else if(conduta=="acompanhamento3"){
+                pontuacao=pontuacao+5;
+                resultado.textContent=
+                "Conduta registrada: acompanhamento clínico e avaliação dos sintomas. +5 pontos";
+            }
+        }
+    }
+else if(especialidadeEscolhida=="Cardiologia"){
+    if(
+        conduta=="cardioExames" ||
+        conduta=="cardioEspecialista" ||
+        conduta=="cardioSintomas" ||
+        conduta=="cardioAcompanhar"
+    ){
+        pontuacao=pontuacao+10;
+        resultado.textContent=
+        "Conduta registrada na simulação! A decisão deve considerar os exames, os sintomas e a avaliação da equipe profissional. +10 pontos";
+    }
 }
-if(condutaEscolhida==true){
-resultado.textContent=
-"Você já escolheu uma conduta para este paciente!";
-return;
-}
-condutaEscolhida=true;
-if(conduta=="anemia"){
-pontuacao=pontuacao+10;
-resultado.textContent=
-"Conduta registrada: investigar possível anemia. A avaliação profissional é necessária. +10 pontos";
-}
-else if(conduta=="cardiologia"){
-pontuacao=pontuacao+5;
-resultado.textContent=
-"Conduta registrada: encaminhamento para Cardiologia devido às palpitações e falta de ar. +5 pontos";
-}
-document.getElementById("pontuacao").textContent=pontuacao;
 }
 function voltarPaciente(){
 document.getElementById("telaResultado").style.display="none";
+if(pacienteAtual==1){
 document.getElementById("telaPaciente").style.display="block";
+}
+else if(pacienteAtual==2){
+document.getElementById("telaPaciente2").style.display="block";
+}
+else if(pacienteAtual==3){
+document.getElementById("telaPaciente3").style.display="block";
+}
 }
 function mostrarPaciente2(){
 condutaEscolhida=false;
+pacienteAtual=2;
 document.getElementById("telaPaciente").style.display="none";
 document.getElementById("telaPaciente2").style.display="block";
+atualizarCondutas();
 }
 function mostrarExamesPaciente2(){
 let exames=[
@@ -346,6 +977,7 @@ area.innerHTML="";
 for(let i=0;i<examesPaciente.length;i++){
 let nomeExame=examesPaciente[i];
 let botao=document.createElement("button");
+botao.className="botaoExame";
 botao.textContent="Solicitar "+nomeExame;
 botao.style.display="block";
 botao.style.margin="10px auto";
@@ -354,6 +986,60 @@ document.getElementById("telaPaciente2").style.display="none";
 document.getElementById("telaResultado").style.display="block";
 document.getElementById("resultadoFinal").textContent=resultados[nomeExame];
 document.getElementById("explicacaoIA").textContent="IA Assistente: "+explicacoes[nomeExame];
+};
+area.appendChild(botao);
+}
+}
+function mostrarExamesPaciente3(){
+let exames=[
+"Pressão arterial",
+"Raio-X de tórax",
+"Ecocardiograma",
+"Exame de colesterol",
+"Teste ergométrico",
+"Hemograma"
+];
+let exameCorreto="Eletrocardiograma";
+let resultados={
+"Eletrocardiograma":"Resultado simulado: foram observadas alterações que precisam de avaliação profissional.",
+"Pressão arterial":"Resultado simulado: pressão arterial dentro do valor esperado.",
+"Raio-X de tórax":"Resultado simulado: sem alterações visíveis nesta simulação.",
+"Ecocardiograma":"Resultado simulado: estrutura cardíaca sem alterações relevantes nesta simulação.",
+"Exame de colesterol":"Resultado simulado: colesterol dentro do valor esperado.",
+"Teste ergométrico":"Resultado simulado: alterações não significativas durante a simulação.",
+"Hemograma":"Resultado simulado: níveis sanguíneos dentro do valor esperado."
+};
+let explicacoes={
+"Eletrocardiograma":"A IA sugere avaliação profissional devido às alterações encontradas no exame.",
+"Pressão arterial":"A IA informa que o resultado simulado não apresenta alterações relevantes.",
+"Raio-X de tórax":"A IA sugere relacionar o resultado com os sintomas apresentados pelo paciente.",
+"Ecocardiograma":"A IA sugere analisar o resultado junto ao histórico e aos demais exames.",
+"Exame de colesterol":"A IA informa que o resultado simulado está dentro do valor esperado.",
+"Teste ergométrico":"A IA sugere avaliação profissional considerando os sintomas relatados.",
+"Hemograma":"A IA informa que o resultado simulado não apresenta alterações relevantes."
+};
+exames.sort(()=>Math.random()-0.5);
+let examesPaciente=[
+exameCorreto,
+...exames.slice(0,3)
+];
+examesPaciente.sort(()=>Math.random()-0.5);
+let area=document.getElementById("mostrarExamesPaciente3");
+area.innerHTML="";
+for(let i=0;i<examesPaciente.length;i++){
+let nomeExame=examesPaciente[i];
+let botao=document.createElement("button");
+botao.className="botaoExame";
+botao.textContent="Solicitar "+nomeExame;
+botao.style.display="block";
+botao.style.margin="10px auto";
+botao.onclick=function(){
+document.getElementById("telaPaciente3").style.display="none";
+document.getElementById("telaResultado").style.display="block";
+document.getElementById("resultadoFinal").textContent=
+resultados[nomeExame];
+document.getElementById("explicacaoIA").textContent=
+"IA Assistente: "+explicacoes[nomeExame];
 };
 area.appendChild(botao);
 }

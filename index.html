@@ -474,16 +474,23 @@ let pontuacao=0;
 let condutaEscolhida=false;
 let pacienteAtual=1;
 let especialidadeEscolhida="";
+let pacientesPontuados=[];
 function iniciarAtendimento(){
     let nome=document.getElementById("nome").value;
     let tratamento=document.getElementById("tratamento").value;
     let especialidade=document.getElementById("especialidade").value;
-
     if(nome.trim()===""){
         alert("Por favor, digite seu nome!");
     }
     else{
         especialidadeEscolhida=especialidade;
+        pontuacao=0;
+pacientesPontuados=[];
+pacienteAtual=1;
+condutaEscolhida=false;
+document.getElementById("pontuacao").textContent=pontuacao;
+document.getElementById("resultadoConduta").textContent="";
+document.getElementById("telaFinal").style.display="none";
         document.getElementById("telaInicial").style.display="none";
         document.getElementById("telaAtendimento").style.display="block";
         document.getElementById("tituloAtendimento").textContent=
@@ -825,6 +832,7 @@ function atualizarCondutas(){
 function avancarPaciente(){
     document.getElementById("telaResultado").style.display="none";
     esconderTelasPacientes();
+      document.getElementById("resultadoConduta").textContent="";
     condutaEscolhida=false;
     if(pacienteAtual<3){
         pacienteAtual=pacienteAtual+1;
@@ -862,12 +870,15 @@ function escolherConduta(conduta){
         avancarPaciente();
         return;
     }
-    if(condutaEscolhida==true){
-        resultado.textContent=
-        "Você já escolheu uma conduta para este paciente!";
-        return;
-    }
+let identificadorPaciente=especialidadeEscolhida+"-"+pacienteAtual;
+if(condutaEscolhida==true ||
+   pacientesPontuados.includes(identificadorPaciente)){
+    resultado.textContent=
+    "Você já registrou uma conduta para este paciente!";
+    return;
+}
     condutaEscolhida=true;
+    pacientesPontuados.push(identificadorPaciente);
     if(especialidadeEscolhida=="Clínica Geral"){
         if(pacienteAtual==1){
             if(conduta=="anemia"){

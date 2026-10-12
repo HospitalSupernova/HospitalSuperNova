@@ -237,8 +237,8 @@ Explore o futuro da medicina com o auxílio da inteligência artificial.
     Começar Atendimento
     </button>
 </div>
-<button onclick="escolherOpcao('Projeto')">
-Conhecer o projeto
+<button onclick="window.open('https://biotécia.github.io/Biotec/', '_blank')">
+    Conhecer o projeto
 </button>
 </section>
 <section id="telaAtendimento" style="display:none" class="botaoPrincipal";>
@@ -256,9 +256,10 @@ Ver primeiro paciente
 <img src="paciente004.jpg.png"
 alt="Foto da paciente Ana Costa"
 class="fotoPaciente">
-<h2 class="nomePaciente">Paciente 004 - Ana Costa</h2>
-<p>Idade: 54 anos</p>
-<h3>Profissão: Advogada</h3>
+<h2 class="nomePaciente">Paciente 001 - Ana Costa</h2>
+    <p><strong>Idade:</strong> 54 anos</p>
+    <p><strong>Profissão:</strong> Advogada</p>
+    <h3>Queixa principal</h3>
 <p>
 A paciente relata cansaço ao realizar esforços,
 palpitações ocasionais e sensação de falta de ar
@@ -286,9 +287,10 @@ Voltar
 <img src="paciente005.jpg.png"
 alt="Foto do paciente Jorge Almeida"
 class="fotoPaciente">
-<h2 class="nomePaciente">Paciente 005 - Jorge Almeida</h2>
-<p>Idade: 61 anos</p>
-<h3>Profissão: Empresário</h3>
+<h2 class="nomePaciente">Paciente 002 - Jorge Almeida</h2>
+    <p><strong>Idade:</strong> 61 anos</p>
+    <p><strong>Profissão:</strong> Empresário</p>
+    <h3>Queixa principal</h3>
 <p>
 O paciente relata pressão no peito durante esforços,
 cansaço frequente e episódios de tontura.
@@ -315,9 +317,10 @@ Voltar
 <img src="paciente006.jpg.png"
 alt="Foto da paciente Beatriz Lima"
 class="fotoPaciente">
-<h2 class="nomePaciente">Paciente 006 - Beatriz Lima</h2>
-<p>Idade: 47 anos</p>
-<h3>Profissão: Professora</h3>
+<h2 class="nomePaciente">Paciente 003 - Beatriz Lima</h2>
+    <p><strong>Idade:</strong> 47 anos</p>
+    <p><strong>Profissão:</strong> Professora</p>
+    <h3>Queixa principal</h3>
 <p>
 A paciente relata palpitações ocasionais,
 cansaço ao subir escadas e episódios de
@@ -339,18 +342,217 @@ Voltar
 </button>
 </section>
 <section id="telaPacienteNeurologia" style="display:none;">
-    
+    <img
+        src="paciente007.jpg.png"
+        alt="Paciente Helena Martins"
+        class="fotoPaciente"
+    >
+        <h2 class="nomePaciente">Paciente 001 — Helena Martins</h2>
+    <p><strong>Idade:</strong> 46 anos</p>
+    <p><strong>Profissão:</strong> Arquiteta</p>
+    <h3>Queixa principal</h3>
+    <p>
+        A paciente relata episódios de desequilíbrio ao caminhar,
+        principalmente ao mudar de direção. Também sente certa
+        instabilidade ao tentar andar em linha reta.
+    </p>
+    <h3>Histórico do caso</h3>
+<p class="sintomasPaciente">
+    Os sintomas começaram há aproximadamente duas semanas
+    e aparecem de forma intermitente. Helena conta que passou
+    a caminhar mais devagar por receio de perder o equilíbrio.
+</p>
+    <h3>Informações adicionais</h3>
+    <p class="sintomasPaciente">
+        A paciente não sabe explicar o que está provocando os sintomas
+        e procura atendimento para investigar o que está acontecendo.
+    </p>
+    <h3>Escolha um exame para continuar a investigação</h3>
+    <div id="examesNeurologia1"></div>
+    <button onclick="mostrarExamesNeurologia(1)">
+        Mostrar exames disponíveis
+    </button>
+    <button onclick="voltarAtendimento()">
+        Voltar ao atendimento
+    </button>
 </section>
-<section id="telaPacientePediatria" style="display:none;">
-    
+<section id="telaPacienteNeurologia2" style="display:none;">
+    <img
+        src="paciente008.jpg.png"
+        alt="Paciente Roberto Nunes"
+        class="fotoPaciente"
+    >
+        <h2 class="nomePaciente">Paciente 002 — Roberto Nunes</h2>
+    <p><strong>Idade:</strong> 57 anos</p>
+    <p><strong>Profissão:</strong> Contador</p>
+    <h3>Queixa principal</h3>
+    <p>
+        O paciente relata dificuldade para lembrar compromissos recentes
+        e passou a anotar suas tarefas com mais frequência.
+        Também conta que, às vezes, esquece onde deixou objetos.
+    </p>
+    <h3>Histórico do caso</h3>
+    <p class="sintomasPaciente">
+        As alterações vêm sendo percebidas gradualmente há aproximadamente
+        quatro meses. Familiares observaram que Roberto, em algumas
+        ocasiões, repete perguntas que já havia feito.
+    </p>
+    <h3>Objetivo da investigação</h3>
+    <p class="sintomasPaciente">
+        Investigar as alterações de memória e atenção por meio de
+        avaliação profissional e exames apropriados ao caso.
+    </p>
+    <h3>Escolha um exame para continuar a investigação</h3>
+    <div id="examesNeurologia2"></div>
+    <button onclick="mostrarExamesNeurologia(2)">
+        Mostrar exames disponíveis
+    </button>
+    <button onclick="voltarAtendimento()">
+        Voltar ao atendimento
+    </button>
+</section>
+<section id="telaPacienteNeurologia3" style="display:none;">
+    <img src="paciente009.jpg.png"
+    alt="Foto do paciente Gabriel"
+    class="fotoPaciente">
+    <h2 class="nomePaciente">
+        Paciente 003 - Gabriel
+    </h2>
+    <p><strong>Idade:</strong> 36 anos</p>
+    <p><strong>Profissão:</strong> Analista de Sistemas</p>
+    <h3>Queixa principal</h3>
+    <p>
+        O paciente relata cansaço frequente,
+        dificuldade para manter uma rotina de sono
+        regular e sensação de não ter descansado
+        o suficiente ao acordar.
+    </p>
+    <h3>Histórico Médico</h3>
+    <p class="sintomasPaciente">
+        Os sintomas começaram há aproximadamente
+        dois meses e vêm interferindo nas atividades
+        diárias do paciente. Ele relata horários
+        irregulares de sono e dificuldade para
+        manter a concentração durante o dia.
+    </p>
+    <h3>Exames disponíveis</h3>
+    <button class="botaoExame"
+    onclick="mostrarExamesNeurologia(3)">
+        Ver exames disponíveis
+    </button>
+    <p id="mostrarExamesNeurologia3"></p>
+    <button onclick="voltarAtendimento()">
+        Voltar ao antendimento
+    </button>
+</section>
+<section id="telaPacientePediatria1" style="display:none;">
+    <img src="paciente010.jpg.png"
+    alt="Foto do paciente Lucas Ferreira"
+    class="fotoPaciente">
+    <h2 class="nomePaciente">Paciente 001 - Lucas Ferreira</h2>
+    <p><strong>Idade:</strong> 17 anos</p>
+    <p><strong>Profissão:</strong> Estudante</p>
+    <h3>Queixa principal</h3>
+    <p class="sintomasPaciente">
+        Lucas relata cansaço frequente, que vem
+        interferindo em sua rotina.
+    </p>
+    <h3>Histórico Médico</h3>
+    <p class="sintomasPaciente">
+        Os sintomas são recorrentes. Lucas também
+        relata dificuldade para dormir. Será necessário
+        investigar o contexto e avaliar os sintomas.
+    </p>
+    <h3>Exames disponíveis</h3>
+    <button class="botaoExame"
+    onclick="mostrarExamesPediatria1()">
+        Ver exames disponíveis
+    </button>
+    <div id="mostrarExamesPediatria1"></div>
+    <button onclick="mostrarPacientePediatria2()">
+    Ver próximo paciente
+</button>
+    <button onclick="voltarAtendimento()">
+        Voltar ao atendimento
+    </button>
+</section>
+<section id="telaPacientePediatria2" style="display:none;">
+    <img src="paciente011.jpg.png"
+    alt="Foto da paciente Sofia Almeida"
+    class="fotoPaciente">
+    <h2 class="nomePaciente">Paciente 002 - Sofia Almeida</h2>
+    <p><strong>Idade:</strong> 8 anos</p>
+    <p><strong>Profissão:</strong> Estudante</p>
+    <h3>Queixa principal</h3>
+    <p class="sintomasPaciente">
+        Sofia relata dores abdominais recorrentes.
+    </p>
+    <h3>Histórico Médico</h3>
+    <p class="sintomasPaciente">
+        As dores aparecem em diferentes momentos.
+        Recentemente, Sofia passou por mudanças na
+        rotina escolar. Essa informação será considerada
+        durante a investigação, sem presumir a causa.
+    </p>
+    <h3>Exames disponíveis</h3>
+    <button class="botaoExame"
+    onclick="mostrarExamesPediatria2()">
+        Ver exames disponíveis
+    </button>
+    <div id="mostrarExamesPediatria2"></div>
+    <button onclick="mostrarPacientePediatria3()">
+    Ver próximo paciente
+</button>
+    <button onclick="voltarAtendimento()">
+        Voltar ao atendimento
+    </button>
+</section>
+<section id="telaPacientePediatria3" style="display:none;">
+    <img src="paciente012.jpg.png"
+    alt="Foto do paciente Miguel Santos"
+    class="fotoPaciente">
+    <h2 class="nomePaciente">
+        Paciente 003 - Miguel Santos
+    </h2>
+    <p><strong>Idade:</strong> 13 anos</p>
+    <p><strong>Profissão:</strong> Estudante</p>
+    <h3>Queixa principal</h3>
+    <p class="sintomasPaciente">
+        Miguel relata episódios ocasionais de tontura
+        que começaram há algumas semanas.
+    </p>
+    <h3>Histórico Médico</h3>
+    <p class="sintomasPaciente">
+        Os sintomas aparecem de forma intermitente.
+        A família relata que Miguel também apresenta
+        dificuldade para dormir.
+    </p>
+    <h3>Informações adicionais</h3>
+    <p class="sintomasPaciente">
+        O paciente procura atendimento acompanhado
+        de um responsável para investigar os sintomas.
+    </p>
+    <h3>Exames disponíveis</h3>
+    <p>
+        Escolha uma avaliação para continuar a investigação.
+    </p>
+    <button class="botaoExame"
+    onclick="mostrarExamesPediatria3()">
+        Ver exames disponíveis
+    </button>
+    <div id="mostrarExamesPediatria3"></div>
+    <button onclick="voltarAtendimento()">
+        Voltar ao atendimento
+    </button>
 </section>
 <section id="telaPaciente" style="display:none;">
 <img src="paciente001.jpg.png"
 alt="Foto do paciente Carlos Mendes"
 class="fotoPaciente">
 <h2 class="nomePaciente">Paciente 001 - Carlos Mendes</h2>
-<p>Idade: 45 anos</p>
-<h3>Profissão: Motorista</h3>
+    <p><strong>Idade:</strong> 45 anos</p>
+    <p><strong>Profissão:</strong> Motorista</p>
+    <h3>Queixa principal</h3>
 <p>
 O paciente relata cansaço frequente,
 falta de ar ao subir escadas, tontura
@@ -379,8 +581,9 @@ Voltar
 alt="Foto da paciente Maria Silva"
 class="fotoPaciente">
 <h2 class="nomePaciente">Paciente 002 - Maria Silva</h2>
-<p>Idade: 32 anos</p>
-<h3>Profissão: Professora</h3>
+    <p><strong>Idade:</strong> 32 anos</p>
+    <p><strong>Profissão:</strong> Professora</p>
+    <h3>Queixa principal</h3>
 <p>
 A paciente relata dores de cabeça frequentes,
 sensibilidade à luz e episódios de tontura.
@@ -406,8 +609,9 @@ Voltar
 alt="Foto do paciente Rafael Oliveira"
 class="fotoPaciente">
 <h2 class="nomePaciente">Paciente 003 - Rafael Oliveira</h2>
-<p>Idade: 58 anos</p>
-<h3>Profissão: Comerciante</h3>
+    <p><strong>Idade:</strong> 58 anos</p>
+    <p><strong>Profissão:</strong> Comerciante</p>
+    <h3>Queixa principal</h3>
 <p>
 O paciente relata dor no peito ao realizar esforços,
 cansaço frequente e sensação de pressão no peito.
@@ -524,22 +728,35 @@ function mostrarPaciente(){
     else if(especialidadeEscolhida=="Cardiologia"){
         document.getElementById("telaPacienteCardiologia1").style.display="block";
     }
-    else if(especialidadeEscolhida=="Neurologia"){
+else if(especialidadeEscolhida=="Neurologia"){
+    if(pacienteAtual==1){
         document.getElementById("telaPacienteNeurologia").style.display="block";
     }
+    else if(pacienteAtual==2){
+        document.getElementById("telaPacienteNeurologia2").style.display="block";
+    }
+    else if(pacienteAtual==3){
+        document.getElementById("telaPacienteNeurologia3").style.display="block";
+    }
+    atualizarCondutas();
+}
     else if(especialidadeEscolhida=="Pediatria"){
-        document.getElementById("telaPacientePediatria").style.display="block";
+        document.getElementById("telaPacientePediatria1").style.display="block";
     }
 }
 function esconderTelasPacientes(){
-    document.getElementById("telaPaciente").style.display="none";
-    document.getElementById("telaPaciente2").style.display="none";
-    document.getElementById("telaPaciente3").style.display="none";
-    document.getElementById("telaPacienteCardiologia1").style.display="none";
-    document.getElementById("telaPacienteCardiologia2").style.display="none";
-    document.getElementById("telaPacienteCardiologia3").style.display="none";
-    document.getElementById("telaPacienteNeurologia").style.display="none";
-    document.getElementById("telaPacientePediatria").style.display="none";
+    document.getElementById("telaPaciente").style.display = "none";
+    document.getElementById("telaPaciente2").style.display = "none";
+    document.getElementById("telaPaciente3").style.display = "none";
+    document.getElementById("telaPacienteCardiologia1").style.display = "none";
+    document.getElementById("telaPacienteCardiologia2").style.display = "none";
+    document.getElementById("telaPacienteCardiologia3").style.display = "none";
+    document.getElementById("telaPacienteNeurologia").style.display = "none";
+    document.getElementById("telaPacienteNeurologia2").style.display = "none";
+    document.getElementById("telaPacienteNeurologia3").style.display = "none";
+    document.getElementById("telaPacientePediatria1").style.display = "none";
+    document.getElementById("telaPacientePediatria2").style.display = "none";
+    document.getElementById("telaPacientePediatria3").style.display = "none";
 }
 function voltarAtendimento(){
     esconderTelasPacientes();
@@ -557,6 +774,174 @@ function mostrarPacienteCardio3(){
     pacienteAtual=3;
     condutaEscolhida=false;
     document.getElementById("telaPacienteCardiologia3").style.display="block";
+}
+function mostrarExamesPediatria1(){
+    let exames=[
+        "Hemograma",
+        "Glicemia",
+        "Pressão arterial",
+        "Avaliação da qualidade do sono",
+        "Oximetria",
+        "Ferritina",
+        "Avaliação clínica pediátrica"
+    ];
+    let exameCorreto="Avaliação clínica pediátrica";
+    let resultados={
+        "Hemograma":"Resultado simulado: não foram observadas alterações relevantes no hemograma.",
+        "Glicemia":"Resultado simulado: glicemia dentro do intervalo esperado nesta simulação.",
+        "Pressão arterial":"Resultado simulado: pressão arterial dentro do intervalo esperado nesta simulação.",
+        "Avaliação da qualidade do sono":"Resultado simulado: foram relatadas dificuldades para manter uma rotina regular de sono.",
+        "Oximetria":"Resultado simulado: saturação de oxigênio dentro do intervalo esperado nesta simulação.",
+        "Ferritina":"Resultado simulado: resultado dentro do intervalo esperado nesta simulação.",
+        "Avaliação clínica pediátrica":"Resultado simulado: a avaliação identificou informações que precisam ser investigadas junto ao histórico, ao cansaço e às dificuldades de sono."
+    };
+    let explicacoes={
+        "Hemograma":"A IA explica que um hemograma sem alterações relevantes não esclarece necessariamente todas as causas do cansaço.",
+        "Glicemia":"A IA sugere interpretar o resultado junto aos sintomas e ao histórico do paciente.",
+        "Pressão arterial":"A IA recomenda considerar a medição junto à avaliação clínica.",
+        "Avaliação da qualidade do sono":"A IA destaca a importância de investigar a rotina de sono e sua relação com o cansaço.",
+        "Oximetria":"A IA explica que um resultado dentro do esperado não exclui todas as possíveis causas dos sintomas.",
+        "Ferritina":"A IA recomenda interpretar o resultado junto ao histórico e aos demais dados clínicos.",
+        "Avaliação clínica pediátrica":"A IA sugere uma avaliação profissional mais detalhada, considerando o cansaço frequente e a dificuldade para dormir. O resultado não estabelece um diagnóstico definitivo."
+    };
+    exames.sort(()=>Math.random()-0.5);
+    let examesPaciente=[
+        exameCorreto,
+        ...exames.filter(exame=>exame!==exameCorreto).slice(0,3)
+    ];
+    examesPaciente.sort(()=>Math.random()-0.5);
+    let area=document.getElementById("mostrarExamesPediatria1");
+    area.innerHTML="";
+    for(let i=0;i<examesPaciente.length;i++){
+        let nomeExame=examesPaciente[i];
+        let botao=document.createElement("button");
+        botao.className="botaoExame";
+        botao.textContent="Solicitar "+nomeExame;
+        botao.onclick=function(){
+            document.getElementById("telaPacientePediatria1").style.display="none";
+            document.getElementById("telaResultado").style.display="block";
+            document.getElementById("resultadoFinal").textContent=
+                resultados[nomeExame];
+            document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: "+explicacoes[nomeExame];
+            atualizarCondutas();
+        };
+        area.appendChild(botao);
+    }
+}
+function mostrarExamesPediatria2(){
+    let exames=[
+        "Hemograma",
+        "Avaliação clínica pediátrica",
+        "Exame de urina",
+        "Avaliação alimentar",
+        "Ultrassonografia abdominal",
+        "Avaliação do histórico de sintomas",
+        "Avaliação de hábitos intestinais"
+    ];
+    let exameCorreto="Avaliação clínica pediátrica";
+    let resultados={
+        "Hemograma":"Resultado simulado: o hemograma não apresentou alterações relevantes nesta simulação.",
+        "Avaliação clínica pediátrica":"Resultado simulado: a avaliação identificou a necessidade de investigar melhor as dores abdominais recorrentes e o histórico da paciente.",
+        "Exame de urina":"Resultado simulado: não foram observadas alterações relevantes neste exame simulado.",
+        "Avaliação alimentar":"Resultado simulado: foram identificadas informações sobre a rotina alimentar que merecem ser consideradas na investigação.",
+        "Ultrassonografia abdominal":"Resultado simulado: não foram observadas alterações relevantes nas imagens simuladas. Isso não exclui todas as possíveis causas da dor.",
+        "Avaliação do histórico de sintomas":"Resultado simulado: as dores acontecem em diferentes momentos e precisam ser investigadas com mais informações.",
+        "Avaliação de hábitos intestinais":"Resultado simulado: é necessário reunir mais informações sobre os hábitos intestinais e os sintomas relatados."
+    };
+    let explicacoes={
+        "Hemograma":"A IA explica que um hemograma sem alterações relevantes não descarta todas as possíveis causas das dores abdominais.",
+        "Avaliação clínica pediátrica":"A IA sugere considerar o histórico, a frequência das dores e os demais dados da paciente. O resultado não estabelece um diagnóstico definitivo.",
+        "Exame de urina":"A IA explica que o resultado deve ser interpretado junto aos sintomas e à avaliação profissional.",
+        "Avaliação alimentar":"A IA sugere investigar a rotina alimentar sem presumir que ela seja a causa das dores.",
+        "Ultrassonografia abdominal":"A IA explica que o exame pode ajudar na investigação, mas seus resultados precisam ser interpretados por profissionais.",
+        "Avaliação do histórico de sintomas":"A IA destaca a importância de registrar quando as dores aparecem, sua duração e as informações relatadas pela paciente.",
+        "Avaliação de hábitos intestinais":"A IA sugere considerar essas informações junto ao histórico e aos demais dados clínicos."
+    };
+    exames.sort(()=>Math.random()-0.5);
+    let examesPaciente=[
+        exameCorreto,
+        ...exames.filter(exame=>exame!==exameCorreto).slice(0,3)
+    ];
+    examesPaciente.sort(()=>Math.random()-0.5);
+    let area=document.getElementById("mostrarExamesPediatria2");
+    area.innerHTML="";
+    for(let i=0;i<examesPaciente.length;i++){
+        let nomeExame=examesPaciente[i];
+        let botao=document.createElement("button");
+        botao.className="botaoExame";
+        botao.textContent="Solicitar "+nomeExame;
+        botao.onclick=function(){
+            document.getElementById("telaPacientePediatria2").style.display="none";
+            document.getElementById("telaResultado").style.display="block";
+            document.getElementById("resultadoFinal").textContent=
+                resultados[nomeExame];
+            document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: "+explicacoes[nomeExame];
+            atualizarCondutas();
+        };
+        area.appendChild(botao);
+    }
+}
+function mostrarExamesPediatria3(){
+    let exames=[
+        "Avaliação clínica pediátrica",
+        "Pressão arterial",
+        "Glicemia",
+        "Hemograma",
+        "Avaliação da qualidade do sono",
+        "Oximetria",
+        "Avaliação do histórico de tontura"
+    ];
+    let exameCorreto="Avaliação clínica pediátrica";
+    let resultados={
+        "Avaliação clínica pediátrica":"Resultado simulado: a avaliação identificou a necessidade de investigar os episódios de tontura e as dificuldades de sono junto ao histórico do paciente.",
+        "Pressão arterial":"Resultado simulado: a medição não apresentou alterações relevantes nesta simulação.",
+        "Glicemia":"Resultado simulado: resultado dentro do intervalo esperado nesta simulação.",
+        "Hemograma":"Resultado simulado: não foram observadas alterações relevantes no hemograma simulado.",
+        "Avaliação da qualidade do sono":"Resultado simulado: foram relatadas dificuldades para manter uma rotina regular de sono.",
+        "Oximetria":"Resultado simulado: saturação de oxigênio dentro do intervalo esperado nesta simulação.",
+        "Avaliação do histórico de tontura":"Resultado simulado: os episódios são intermitentes e precisam ser investigados com mais informações."
+    };
+    let explicacoes={
+        "Avaliação clínica pediátrica":"A IA sugere considerar os sintomas, o histórico e a avaliação profissional. O resultado não estabelece um diagnóstico definitivo.",
+        "Pressão arterial":"A IA explica que a medição deve ser interpretada junto aos sintomas e à avaliação clínica.",
+        "Glicemia":"A IA recomenda considerar o resultado junto aos demais dados e sintomas do paciente.",
+        "Hemograma":"A IA explica que um hemograma sem alterações relevantes não exclui todas as possíveis causas da tontura.",
+        "Avaliação da qualidade do sono":"A IA destaca que as dificuldades de sono são uma informação relevante, mas não devem ser consideradas automaticamente a causa da tontura.",
+        "Oximetria":"A IA explica que um resultado dentro do esperado não exclui todas as possíveis causas dos sintomas.",
+        "Avaliação do histórico de tontura":"A IA destaca a importância de registrar a frequência, a duração e as circunstâncias dos episódios."
+    };
+    exames.sort(()=>Math.random()-0.5);
+    let examesPaciente=[
+        exameCorreto,
+        ...exames.filter(exame=>exame!==exameCorreto).slice(0,3)
+    ];
+    examesPaciente.sort(()=>Math.random()-0.5);
+    let area=document.getElementById("mostrarExamesPediatria3");
+    area.innerHTML="";
+    for(let i=0;i<examesPaciente.length;i++){
+        let nomeExame=examesPaciente[i];
+        let botao=document.createElement("button");
+        botao.className="botaoExame";
+        botao.textContent="Solicitar "+nomeExame;
+        botao.onclick=function(){
+            document.getElementById("telaPacientePediatria3").style.display="none";
+            document.getElementById("telaResultado").style.display="block";
+            document.getElementById("resultadoFinal").textContent=
+                resultados[nomeExame];
+            document.getElementById("explicacaoIA").textContent=
+                "IA Assistente: "+explicacoes[nomeExame];
+            atualizarCondutas();
+        };
+        area.appendChild(botao);
+    }
+}
+function mostrarPacientePediatria3(){
+    esconderTelasPacientes();
+    pacienteAtual=3;
+    condutaEscolhida=false;
+    document.getElementById("telaPacientePediatria3").style.display="block";
 }
 function mostrarExamesCardio1(){
     let exames=[
@@ -583,9 +968,10 @@ function mostrarExamesCardio1(){
         botao.textContent="Solicitar "+nomeExame;
         botao.style.display="block";
         botao.style.margin="10px auto";
-        botao.onclick=function(){
-            document.getElementById("telaPacienteCardiologia1").style.display="none";
-            atualizarCondutas();
+botao.onclick = function(){
+    esconderTelasPacientes();
+    document.getElementById("telaResultado").style.display = "block";
+    atualizarCondutas();
             if(nomeExame=="Eletrocardiograma"){
                 document.getElementById("resultadoFinal").textContent=
                 "Resultado simulado: foram observadas alterações que precisam de avaliação profissional.";
@@ -627,9 +1013,10 @@ function mostrarExamesCardio2(){
         botao.textContent="Solicitar "+nomeExame;
         botao.style.display="block";
         botao.style.margin="10px auto";
-        botao.onclick=function(){
-            document.getElementById("telaPacienteCardiologia2").style.display="none";
-            atualizarCondutas();
+    botao.onclick = function(){
+    esconderTelasPacientes();
+    document.getElementById("telaResultado").style.display = "block";
+    atualizarCondutas();
             if(nomeExame=="Ecocardiograma"){
                 document.getElementById("resultadoFinal").textContent=
                 "Resultado simulado: foram observadas alterações que precisam de avaliação profissional.";
@@ -671,9 +1058,10 @@ function mostrarExamesCardio3(){
         botao.textContent="Solicitar "+nomeExame;
         botao.style.display="block";
         botao.style.margin="10px auto";
-        botao.onclick=function(){
-            document.getElementById("telaPacienteCardiologia3").style.display="none";
-            atualizarCondutas();
+botao.onclick = function(){
+    esconderTelasPacientes();
+    document.getElementById("telaResultado").style.display = "block";
+    atualizarCondutas();
             if(nomeExame=="Eletrocardiograma"){
                 document.getElementById("resultadoFinal").textContent=
                 "Resultado simulado: foram observadas alterações que precisam de avaliação profissional.";
@@ -813,7 +1201,6 @@ function atualizarCondutas(){
             cardio.textContent="Solicitar avaliação cardiológica";
             neuro.textContent="Reavaliar os sintomas relatados";
             acompanhar.textContent="Registrar acompanhamento da equipe";
-
         }
         anemia.onclick=function(){
             escolherConduta("cardioExames");
@@ -828,119 +1215,376 @@ function atualizarCondutas(){
             escolherConduta("cardioAcompanhar");
         };
     }
+else if(especialidadeEscolhida == "Neurologia"){
+    anemia.style.display = "block";
+    cardio.style.display = "block";
+    neuro.style.display = "block";
+    acompanhar.style.display = "block";
+    if(pacienteAtual == 1){
+        anemia.textContent = "Investigar coordenação e equilíbrio";
+        cardio.textContent = "Encaminhar para avaliação neurológica";
+        neuro.textContent = "Continuar a investigação dos sintomas";
+        acompanhar.textContent = "Registrar acompanhamento profissional";
+        anemia.onclick = function(){
+            escolherConduta("neuroCoordenacao");
+        };
+        cardio.onclick = function(){
+            escolherConduta("neuroEspecialista");
+        };
+        neuro.onclick = function(){
+            escolherConduta("neuroReavaliar");
+        };
+        acompanhar.onclick = function(){
+            escolherConduta("neuroAcompanhar");
+        };
+    }
+    else if(pacienteAtual == 2){
+    anemia.textContent = "Investigar memória e atenção";
+    cardio.textContent = "Encaminhar para avaliação especializada";
+    neuro.textContent = "Continuar a investigação cognitiva";
+    acompanhar.textContent = "Registrar acompanhamento profissional";
+    anemia.onclick = function(){
+        escolherConduta("neuroMemoria");
+    };
+    cardio.onclick = function(){
+        escolherConduta("neuroEspecialista2");
+    };
+    neuro.onclick = function(){
+        escolherConduta("neuroInvestigar2");
+    };
+    acompanhar.onclick = function(){
+        escolherConduta("neuroAcompanhar2");
+    };
+}
+    else if(pacienteAtual == 3){
+        anemia.textContent = "Investigar alterações no sono e fadiga";
+        cardio.textContent = "Encaminhar para avaliação especializada";
+        neuro.textContent = "Investigar possíveis causas dos sintomas";
+        acompanhar.textContent = "Registrar sintomas e acompanhar a evolução";
+        anemia.onclick = function(){
+            escolherConduta("neuroSono");
+        };
+        cardio.onclick = function(){
+            escolherConduta("neuroEspecialista3");
+        };
+        neuro.onclick = function(){
+            escolherConduta("neuroInvestigar3");
+        };
+        acompanhar.onclick = function(){
+            escolherConduta("neuroAcompanhar3");
+        };
+   
+        }
+    }
+else if(especialidadeEscolhida=="Pediatria"){
+    anemia.style.display="block";
+    cardio.style.display="block";
+    neuro.style.display="block";
+    acompanhar.style.display="block";
+    if(pacienteAtual==1){
+        anemia.textContent="Investigar as possíveis causas do cansaço";
+        cardio.textContent="Revisar o histórico e os sinais vitais";
+        neuro.textContent="Investigar a rotina e a qualidade do sono";
+        acompanhar.textContent="Registrar sintomas e reavaliar";
+        anemia.onclick=function(){
+            escolherConduta("pediatriaInvestigar");
+        };
+        cardio.onclick=function(){
+            escolherConduta("pediatriaAvaliar");
+        };
+        neuro.onclick=function(){
+            escolherConduta("pediatriaSono");
+        };
+
+        acompanhar.onclick=function(){
+            escolherConduta("pediatriaAcompanhar");
+        };
+    }
+    else if(pacienteAtual==2){
+        anemia.textContent="Investigar as causas das dores abdominais";
+        cardio.textContent="Revisar o histórico e os sintomas";
+        neuro.textContent="Considerar os resultados dos exames";
+        acompanhar.textContent="Registrar os episódios e acompanhar";
+        anemia.onclick=function(){
+            escolherConduta("pediatriaDorInvestigar");
+        };
+        cardio.onclick=function(){
+            escolherConduta("pediatriaDorHistorico");
+        };
+        neuro.onclick=function(){
+            escolherConduta("pediatriaDorExames");
+        };
+        
+        acompanhar.onclick=function(){
+            escolherConduta("pediatriaDorAcompanhar");
+        };
+    }
+    else if(pacienteAtual==3){
+        anemia.textContent="Investigar os episódios de tontura";
+        cardio.textContent="Revisar o histórico e os sintomas";
+        neuro.textContent="Investigar as dificuldades de sono";
+        acompanhar.textContent="Registrar os episódios e acompanhar";
+        anemia.onclick=function(){
+            escolherConduta("pediatriaTonturaInvestigar");
+        };
+        cardio.onclick=function(){
+            escolherConduta("pediatriaTonturaHistorico");
+        };
+        neuro.onclick=function(){
+            escolherConduta("pediatriaTonturaSono");
+        };
+        acompanhar.onclick=function(){
+            escolherConduta("pediatriaTonturaAcompanhar");
+        };
+    }
+}
 }
 function avancarPaciente(){
-    document.getElementById("telaResultado").style.display="none";
+    document.getElementById("telaResultado").style.display = "none";
     esconderTelasPacientes();
-      document.getElementById("resultadoConduta").textContent="";
-    condutaEscolhida=false;
-    if(pacienteAtual<3){
-        pacienteAtual=pacienteAtual+1;
-        if(especialidadeEscolhida=="Clínica Geral"){
-            if(pacienteAtual==2){
-                document.getElementById("telaPaciente2").style.display="block";
+    document.getElementById("resultadoConduta").textContent = "";
+    condutaEscolhida = false;
+    if(pacienteAtual < 3){
+        pacienteAtual = pacienteAtual + 1;
+        if(especialidadeEscolhida == "Clínica Geral"){
+            if(pacienteAtual == 2){
+                document.getElementById("telaPaciente2").style.display = "block";
             }
-            else if(pacienteAtual==3){
-                document.getElementById("telaPaciente3").style.display="block";
-            }
-            atualizarCondutas();
-        }
-        else if(especialidadeEscolhida=="Cardiologia"){
-            if(pacienteAtual==2){
-                document.getElementById("telaPacienteCardiologia2").style.display="block";
-            }
-            else if(pacienteAtual==3){
-                document.getElementById("telaPacienteCardiologia3").style.display="block";
+            else if(pacienteAtual == 3){
+                document.getElementById("telaPaciente3").style.display = "block";
             }
         }
-        else{
-            document.getElementById("telaFinal").style.display="block";
-            document.getElementById("pontuacaoFinal").textContent=pontuacao;
+        else if(especialidadeEscolhida == "Cardiologia"){
+            if(pacienteAtual == 2){
+                document.getElementById("telaPacienteCardiologia2").style.display = "block";
+            }
+            else if(pacienteAtual == 3){
+                document.getElementById("telaPacienteCardiologia3").style.display = "block";
+            }
         }
+        else if(especialidadeEscolhida == "Neurologia"){
+            if(pacienteAtual == 2){
+                document.getElementById("telaPacienteNeurologia2").style.display = "block";
+            }
+            else if(pacienteAtual == 3){
+                document.getElementById("telaPacienteNeurologia3").style.display = "block";
+            }
+        }
+        else if(especialidadeEscolhida == "Pediatria"){
+            if(pacienteAtual == 2){
+                document.getElementById("telaPacientePediatria2").style.display = "block";
+            }
+            else if(pacienteAtual == 3){
+                document.getElementById("telaPacientePediatria3").style.display = "block";
+            }
+        }
+        atualizarCondutas();
     }
     else{
-        document.getElementById("telaFinal").style.display="block";
-        document.getElementById("pontuacaoFinal").textContent=pontuacao;
+        document.getElementById("telaFinal").style.display = "block";
+        document.getElementById("pontuacaoFinal").textContent = pontuacao;
+
+        if(pontuacao >= 90){
+            document.getElementById("mensagemFinal").textContent =
+                "Excelente trabalho! Você concluiu a simulação com ótimas decisões.";
+        }
+        else if(pontuacao >= 60){
+            document.getElementById("mensagemFinal").textContent =
+                "Muito bem! Você concluiu os atendimentos e praticou a análise dos casos.";
+        }
+        else{
+            document.getElementById("mensagemFinal").textContent =
+                "Atendimento concluído! Continue explorando como a IA pode auxiliar os profissionais de saúde.";
+        }
     }
 }
-
 function escolherConduta(conduta){
-    let resultado=document.getElementById("resultadoConduta");
-    if(conduta=="encerrar"){
+    let resultado = document.getElementById("resultadoConduta");
+    if(conduta == "encerrar"){
         avancarPaciente();
         return;
     }
-let identificadorPaciente=especialidadeEscolhida+"-"+pacienteAtual;
-if(condutaEscolhida==true ||
-   pacientesPontuados.includes(identificadorPaciente)){
-    resultado.textContent=
-    "Você já registrou uma conduta para este paciente!";
-    return;
-}
-    condutaEscolhida=true;
+    let identificadorPaciente = especialidadeEscolhida + "-" + pacienteAtual;
+    if(condutaEscolhida == true ||
+       pacientesPontuados.includes(identificadorPaciente)){
+        resultado.textContent =
+        "Você já registrou uma conduta para este paciente!";
+        return;
+    }
+    let pontosGanhos = 0;
+    let mensagem = "";
+    if(especialidadeEscolhida == "Clínica Geral"){
+        if(pacienteAtual == 1){
+            if(conduta == "anemia"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar possível anemia com avaliação profissional.";
+            }
+            else if(conduta == "cardiologia"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: encaminhamento para Cardiologia devido às palpitações e falta de ar.";
+            }
+        }
+        else if(pacienteAtual == 2){
+            if(conduta == "neurologia"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: encaminhamento para Neurologia.";
+            }
+            else if(conduta == "acompanhar"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: acompanhar os sintomas e realizar avaliação profissional.";
+            }
+        }
+        else if(pacienteAtual == 3){
+            if(conduta == "cardiologia3"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: encaminhamento para avaliação cardiológica.";
+            }
+            else if(conduta == "acompanhamento3"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: acompanhamento clínico e avaliação dos sintomas.";
+            }
+        }
+    }
+    else if(especialidadeEscolhida == "Cardiologia"){
+        if(conduta == "cardioExames" ||
+           conduta == "cardioEspecialista"){
+            pontosGanhos = 10;
+            mensagem = "Conduta registrada na simulação! A decisão deve considerar os exames, os sintomas e a avaliação da equipe profissional.";
+        }
+        else if(conduta == "cardioSintomas" ||
+                conduta == "cardioAcompanhar"){
+            pontosGanhos = 5;
+            mensagem = "Conduta registrada na simulação! A decisão deve considerar os exames, os sintomas e a avaliação da equipe profissional.";
+        }
+    }
+    else if(especialidadeEscolhida == "Neurologia"){
+        if(pacienteAtual == 1){
+            if(conduta == "neuroCoordenacao" ||
+               conduta == "neuroEspecialista"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar as alterações de coordenação e equilíbrio com avaliação profissional.";
+            }
+            else if(conduta == "neuroReavaliar" ||
+                    conduta == "neuroAcompanhar"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: continuar a investigação e acompanhar os sintomas com a equipe profissional.";
+            }
+        }
+        else if(pacienteAtual == 2){
+            if(conduta == "neuroMemoria" ||
+               conduta == "neuroEspecialista2"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar as alterações de memória e atenção com avaliação profissional.";
+            }
+            else if(conduta == "neuroInvestigar2" ||
+                    conduta == "neuroAcompanhar2"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: continuar a investigação e manter acompanhamento profissional.";
+            }
+        }
+        else if(pacienteAtual == 3){
+            if(conduta == "neuroSono" ||
+               conduta == "neuroEspecialista3"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar as alterações de sono e fadiga com avaliação profissional.";
+            }
+            else if(conduta == "neuroInvestigar3" ||
+                    conduta == "neuroAcompanhar3"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: continuar a investigação e acompanhar os sintomas.";
+            }
+        }
+    }
+    else if(especialidadeEscolhida == "Pediatria"){
+        if(pacienteAtual == 1){
+            if(conduta == "pediatriaInvestigar" ||
+               conduta == "pediatriaAvaliar" ||
+               conduta == "pediatriaSono"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar o cansaço e as dificuldades de sono com avaliação profissional.";
+            }
+            else if(conduta == "pediatriaAcompanhar"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: registrar os sintomas e acompanhar sua evolução com a equipe profissional.";
+            }
+        }
+        else if(pacienteAtual == 2){
+            if(conduta == "pediatriaDorInvestigar"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar as possíveis causas das dores abdominais com avaliação profissional.";
+            }
+            else if(conduta == "pediatriaDorHistorico" ||
+                    conduta == "pediatriaDorExames"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: considerar o histórico, os sintomas e os resultados dos exames na investigação.";
+            }
+            else if(conduta == "pediatriaDorAcompanhar"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: registrar os episódios de dor e acompanhar sua evolução com a equipe profissional.";
+            }
+        }
+        else if(pacienteAtual == 3){
+            if(conduta == "pediatriaTonturaInvestigar"){
+                pontosGanhos = 10;
+                mensagem = "Conduta registrada: investigar os episódios de tontura com avaliação profissional.";
+            }
+            else if(conduta == "pediatriaTonturaHistorico" ||
+                    conduta == "pediatriaTonturaSono"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: considerar o histórico, os sintomas e as dificuldades de sono na investigação.";
+            }
+            else if(conduta == "pediatriaTonturaAcompanhar"){
+                pontosGanhos = 5;
+                mensagem = "Conduta registrada: registrar os episódios e acompanhar sua evolução com a equipe profissional.";
+            }
+        }
+    }
+    if(mensagem == ""){
+        resultado.textContent = "Não foi possível registrar essa conduta. Tente novamente.";
+        return;
+    }
+    condutaEscolhida = true;
     pacientesPontuados.push(identificadorPaciente);
-    if(especialidadeEscolhida=="Clínica Geral"){
-        if(pacienteAtual==1){
-            if(conduta=="anemia"){
-                pontuacao=pontuacao+10;
-                resultado.textContent=
-                "Conduta registrada: investigar possível anemia. A avaliação profissional é necessária. +10 pontos";
-            }
-            else if(conduta=="cardiologia"){
-                pontuacao=pontuacao+5;
-                resultado.textContent=
-                "Conduta registrada: encaminhamento para Cardiologia devido às palpitações e falta de ar. +5 pontos";
-            }
-        }
-        else if(pacienteAtual==2){
-            if(conduta=="neurologia"){
-                pontuacao=pontuacao+10;
-                resultado.textContent=
-                "Conduta registrada: encaminhamento para Neurologia. A avaliação profissional é necessária. +10 pontos";
-            }
-            else if(conduta=="acompanhar"){
-                pontuacao=pontuacao+5;
-                resultado.textContent=
-                "Conduta registrada: acompanhar os sintomas e realizar avaliação profissional. +5 pontos";
-            }
-        }
-        else if(pacienteAtual==3){
-            if(conduta=="cardiologia3"){
-                pontuacao=pontuacao+10;
-                resultado.textContent=
-                "Conduta registrada: encaminhamento para avaliação cardiológica. A avaliação profissional é necessária. +10 pontos";
-            }
-            else if(conduta=="acompanhamento3"){
-                pontuacao=pontuacao+5;
-                resultado.textContent=
-                "Conduta registrada: acompanhamento clínico e avaliação dos sintomas. +5 pontos";
-            }
-        }
-    }
-else if(especialidadeEscolhida=="Cardiologia"){
-    if(
-        conduta=="cardioExames" ||
-        conduta=="cardioEspecialista" ||
-        conduta=="cardioSintomas" ||
-        conduta=="cardioAcompanhar"
-    ){
-        pontuacao=pontuacao+10;
-        resultado.textContent=
-        "Conduta registrada na simulação! A decisão deve considerar os exames, os sintomas e a avaliação da equipe profissional. +10 pontos";
-    }
-}
+    pontuacao = pontuacao + pontosGanhos;
+    resultado.textContent = mensagem + " +" + pontosGanhos + " pontos";
+    document.getElementById("pontuacao").textContent = pontuacao;
 }
 function voltarPaciente(){
-document.getElementById("telaResultado").style.display="none";
-if(pacienteAtual==1){
-document.getElementById("telaPaciente").style.display="block";
-}
-else if(pacienteAtual==2){
-document.getElementById("telaPaciente2").style.display="block";
-}
-else if(pacienteAtual==3){
-document.getElementById("telaPaciente3").style.display="block";
-}
+    document.getElementById("telaResultado").style.display = "none";
+    esconderTelasPacientes();
+    if(especialidadeEscolhida == "Clínica Geral"){
+        if(pacienteAtual == 1){
+            document.getElementById("telaPaciente").style.display = "block";
+        }
+        else if(pacienteAtual == 2){
+            document.getElementById("telaPaciente2").style.display = "block";
+        }
+        else if(pacienteAtual == 3){
+            document.getElementById("telaPaciente3").style.display = "block";
+        }
+    }
+    else if(especialidadeEscolhida == "Cardiologia"){
+        if(pacienteAtual == 1){
+            document.getElementById("telaPacienteCardiologia1").style.display = "block";
+        }
+        else if(pacienteAtual == 2){
+            document.getElementById("telaPacienteCardiologia2").style.display = "block";
+        }
+        else if(pacienteAtual == 3){
+            document.getElementById("telaPacienteCardiologia3").style.display = "block";
+        }
+    }
+    else if(especialidadeEscolhida == "Neurologia"){
+        if(pacienteAtual == 1){
+            document.getElementById("telaPacienteNeurologia").style.display = "block";
+        }
+        else if(pacienteAtual == 2){
+            document.getElementById("telaPacienteNeurologia2").style.display = "block";
+        }
+        else if(pacienteAtual == 3){
+            document.getElementById("telaPacienteNeurologia3").style.display = "block";
+        }
+    }
 }
 function mostrarPaciente2(){
 condutaEscolhida=false;
@@ -1054,6 +1698,156 @@ document.getElementById("explicacaoIA").textContent=
 };
 area.appendChild(botao);
 }
+}
+function mostrarExamesNeurologia(numeroPaciente) {
+    if (numeroPaciente === 1) {
+        let exames = [
+            "Teste de equilíbrio e marcha",
+            "Exames laboratoriais básicos",
+            "Ressonância magnética do encéfalo"
+        ];
+        let exameCorreto = "Avaliação neurológica e da coordenação";
+        let resultados = {
+            "Avaliação neurológica e da coordenação":
+                "Resultado simulado: foram observadas dificuldades leves de coordenação, que precisam ser investigadas.",
+            "Teste de equilíbrio e marcha":
+                "Resultado simulado: a paciente apresentou instabilidade durante parte da avaliação.",
+            "Exames laboratoriais básicos":
+                "Resultado simulado: os resultados apresentados não mostraram alterações relevantes.",
+            "Ressonância magnética do encéfalo":
+                "Resultado simulado: não foram observadas alterações significativas nas imagens."
+        };
+        let explicacoes = {
+            "Avaliação neurológica e da coordenação":
+                "A IA sugere uma avaliação médica mais detalhada para investigar as alterações observadas. O resultado, sozinho, não determina a causa.",
+            "Teste de equilíbrio e marcha":
+                "A IA relaciona o resultado com a queixa de desequilíbrio e sugere considerar outras informações da avaliação.",
+            "Exames laboratoriais básicos":
+                "A IA informa que resultados sem alterações relevantes não descartam todas as possíveis causas dos sintomas.",
+            "Ressonância magnética do encéfalo":
+                "A IA explica que um exame de imagem sem alterações significativas não exclui todas as possíveis causas do desequilíbrio."
+        };
+        exames.push(exameCorreto);
+        exames.sort(() => Math.random() - 0.5);
+        let area = document.getElementById("examesNeurologia1");
+        area.innerHTML = "";
+        for (let i = 0; i < exames.length; i++) {
+            let nomeExame = exames[i];
+            let botao = document.createElement("button");
+            botao.className = "botaoExame";
+            botao.textContent = "Solicitar " + nomeExame;
+            botao.style.display = "block";
+            botao.style.margin = "10px auto";
+            botao.onclick = function() {
+                document.getElementById("telaPacienteNeurologia").style.display = "none";
+                document.getElementById("telaResultado").style.display = "block";
+                document.getElementById("resultadoFinal").textContent =
+                    resultados[nomeExame];
+                document.getElementById("explicacaoIA").textContent =
+                    "IA Assistente: " + explicacoes[nomeExame];
+                atualizarCondutas();
+            };
+            area.appendChild(botao);
+        }
+    }
+    else if (numeroPaciente === 2) {
+        let exames = [
+            "Exames laboratoriais básicos",
+            "Ressonância magnética do encéfalo",
+            "Avaliação cognitiva complementar"
+        ];
+        let exameCorreto = "Avaliação de memória e atenção";
+        let resultados = {
+            "Avaliação de memória e atenção":
+                "Resultado simulado: foram observadas dificuldades em algumas tarefas de memória recente e atenção.",
+            "Exames laboratoriais básicos":
+                "Resultado simulado: os resultados apresentados não mostraram alterações relevantes.",
+            "Ressonância magnética do encéfalo":
+                "Resultado simulado: não foram observadas alterações significativas nas imagens.",
+            "Avaliação cognitiva complementar":
+                "Resultado simulado: o desempenho em algumas tarefas ficou abaixo do esperado para a avaliação fictícia."
+        };
+        let explicacoes = {
+            "Avaliação de memória e atenção":
+                "A IA sugere uma avaliação profissional mais detalhada das queixas cognitivas. Esse resultado isolado não determina uma causa.",
+            "Exames laboratoriais básicos":
+                "A IA explica que resultados sem alterações relevantes não descartam todas as possíveis causas dos sintomas.",
+            "Ressonância magnética do encéfalo":
+                "A IA explica que imagens sem alterações significativas não excluem todas as possíveis causas das queixas.",
+            "Avaliação cognitiva complementar":
+                "A IA sugere analisar o resultado junto ao histórico, às queixas e à avaliação profissional."
+        };
+        exames.push(exameCorreto);
+        exames.sort(() => Math.random() - 0.5);
+        let area = document.getElementById("examesNeurologia2");
+        area.innerHTML = "";
+        for (let i = 0; i < exames.length; i++) {
+            let nomeExame = exames[i];
+            let botao = document.createElement("button");
+            botao.className = "botaoExame";
+            botao.textContent = "Solicitar " + nomeExame;
+            botao.style.display = "block";
+            botao.style.margin = "10px auto";
+            botao.onclick = function() {
+                document.getElementById("telaPacienteNeurologia2").style.display = "none";
+                document.getElementById("telaResultado").style.display = "block";
+                document.getElementById("resultadoFinal").textContent =
+                    resultados[nomeExame];
+                document.getElementById("explicacaoIA").textContent =
+                    "IA Assistente: " + explicacoes[nomeExame];
+                atualizarCondutas();
+            };
+            area.appendChild(botao);
+        }
+    }
+    else if (numeroPaciente === 3) {
+        let exames = [
+            "Diário de sono",
+            "Exames laboratoriais básicos",
+            "Questionário sobre qualidade do sono",
+            "Avaliação especializada do sono"
+        ];
+        let exameCorreto = "Avaliação especializada do sono";
+        let resultados = {
+            "Diário de sono":
+                "Resultado simulado: os horários de sono variam bastante ao longo da semana.",
+            "Exames laboratoriais básicos":
+                "Resultado simulado: os resultados apresentados não mostraram alterações relevantes.",
+            "Questionário sobre qualidade do sono":
+                "Resultado simulado: as respostas indicam sono pouco reparador e cansaço durante o dia.",
+            "Avaliação especializada do sono":
+                "Resultado simulado: foram identificados sinais que justificam investigar melhor a qualidade do sono."
+        };
+        let explicacoes = {
+            "Diário de sono":
+                "A IA sugere analisar os horários e a regularidade do sono junto ao histórico do paciente.",
+            "Exames laboratoriais básicos":
+                "A IA explica que resultados sem alterações relevantes não descartam todas as possíveis causas da fadiga.",
+            "Questionário sobre qualidade do sono":
+                "A IA sugere considerar as queixas de sono e cansaço em uma avaliação profissional.",
+            "Avaliação especializada do sono":
+                "A IA sugere uma avaliação profissional mais detalhada. A simulação não estabelece um diagnóstico definitivo."
+        };
+        exames.sort(() => Math.random() - 0.5);
+        let area = document.getElementById("mostrarExamesNeurologia3");
+        area.innerHTML = "";
+        for (let i = 0; i < exames.length; i++) {
+            let nomeExame = exames[i];
+            let botao = document.createElement("button");
+            botao.className = "botaoExame";
+            botao.textContent = "Solicitar " + nomeExame;
+            botao.onclick = function() {
+                document.getElementById("telaPacienteNeurologia3").style.display = "none";
+                document.getElementById("telaResultado").style.display = "block";
+                document.getElementById("resultadoFinal").textContent =
+                    resultados[nomeExame];
+                document.getElementById("explicacaoIA").textContent =
+                    "IA Assistente: " + explicacoes[nomeExame];
+                atualizarCondutas();
+            };
+            area.appendChild(botao);
+        }
+    }
 }
 </script>
 </body>
